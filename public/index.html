@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Plan a job with people and robots. Explore offline examples and keep your own robot and test records.">
+  <title>Fieldwork · Plan a cleaning job</title>
+  <link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/team.css">
+  <link rel="stylesheet" href="/beginner.css">
+  <link rel="stylesheet" href="/shell.css">
+  <link rel="stylesheet" href="/registry.css">
+  <link rel="stylesheet" href="/customer.css">
+  <link rel="stylesheet" href="/flow.css">
+  <link rel="stylesheet" href="/walkthrough.css">
+  <script type="module" src="/team.js"></script>
+  <script type="module" src="/customer.js"></script>
+  <script type="module" src="/shell.js"></script>
+  <script type="module" src="/walkthrough.js"></script>
+</head>
+<body data-workspace="simple">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="shell-header">
+    <button class="shell-brand" id="workspace-home" aria-label="Fieldwork · Plan a job"><img src="/assets/mark.svg" alt="" width="32" height="32"><span>fieldwork<small>Plan a job</small></span></button>
+    <div class="shell-tools"><button id="watch-walkthrough" class="shell-manage walkthrough-open" aria-haspopup="dialog"><span aria-hidden="true">▶</span> Quick tour</button><button id="manage-registry" class="shell-manage" aria-haspopup="dialog">Robots &amp; results</button><button id="theme-switch" class="theme-switch" aria-label="Switch to light theme" aria-pressed="true">☀ Light</button></div>
+  </header>
+  <main id="main">
+    <div id="connection-error" class="error-panel" role="alert" hidden></div>
+    <div class="workspace-bar"><nav class="workspace-tabs" aria-label="Planning setting"><button data-workspace-view="customer" aria-pressed="true">⌂ Plan a job</button><button data-workspace-view="team" aria-pressed="false">◈ Tested examples</button></nav><span class="workspace-scope"><span aria-hidden="true"></span> Offline planning · nothing starts</span></div>
+    <section id="view-customer" class="customer-view" aria-label="Plan a cleaning job"><p class="customer-loading" role="status">Getting the job planner ready…</p></section>
+<section id="view-team" class="view guide-view" hidden>
+  <div class="guide-top"><a href="#team" class="guide-home" id="guide-home">Where the robots were tested.</a><span class="guide-practice">Practice only · no robots connected</span></div>
+  <p class="guide-tested-intro">The app has no robot evidence for a new building. It can assign work to people when the checks pass. These examples use the settings where each robot was studied, so you can see when a robot is offered and what person it needs.</p>
+  <nav class="guide-steps" aria-label="Planning steps">
+    <button data-guide-step="1" aria-current="step"><span>1</span> Job</button><i></i>
+    <button data-guide-step="2" disabled><span>2</span> Team</button><i></i>
+    <button data-guide-step="3" disabled><span>3</span> Answer</button>
+  </nav>
+  <section id="guide-step-1" class="guide-step">
+    <div class="guide-heading"><span class="guide-kicker">TESTED EXAMPLES</span><h1 tabindex="-1">What needs doing?</h1><p>Pick one job, or try a ready-made situation.</p></div>
+    <div class="guide-presets guide-situations" role="group" aria-label="Ready-made situations"><span>Try:</span><button type="button" data-tested-preset="g1_helper_free">G1 simulation wipe · helper free</button><button type="button" data-tested-preset="g1_helper_busy">G1 simulation wipe · helper busy</button></div>
+    <div class="guide-context" role="group" aria-label="Example setting"><button data-context="tested_contexts" aria-pressed="true">◈ Tested setup</button><button data-context="customer_building" aria-pressed="false">⌂ Paper’s building example</button></div>
+    <p class="guide-context-note" id="guide-context-note">Each robot stays in the setting where it was studied.</p>
+    <div id="guide-jobs" class="guide-jobs" role="group" aria-label="Choose a job"></div>
+    <details id="guide-paper-example" class="customer-details" hidden><summary>The paper’s original 12-job plan</summary><p>This uses the saved building, team and checks exactly as supplied with the paper. Choices above let you try variations.</p><button id="guide-paper-load" class="customer-button" type="button">Show the original plan</button><div id="guide-paper-results" aria-live="polite"></div></details>
+    <section id="guide-requirements" class="guide-requirements" hidden aria-labelledby="guide-request-title">
+      <div class="guide-request-head"><div><span class="guide-kicker">YOUR REQUEST</span><h2 id="guide-request-title">What should the plan meet?</h2></div><span id="guide-location" class="guide-location"></span></div>
+      <p id="guide-task-scope" class="guide-task-scope"></p>
+      <div id="guide-force-controls" hidden>
+        <div class="guide-force-head"><h3>How hard should it press?</h3><div class="guide-toggle" role="group" aria-label="Contact-force requirement"><button data-force-mode="range" aria-pressed="true">A range is OK</button><button data-force-mode="exact" aria-pressed="false">One exact setting</button></div></div>
+        <div class="guide-force-inputs"><label><span id="guide-force-min-label">At least</span><span><input id="guide-force-min" type="number" min="0.1" max="100" step="any" value="6" inputmode="decimal"> N</span></label><label id="guide-force-max-wrap">Up to<span><input id="guide-force-max" type="number" min="0.1" max="100" step="any" value="8" inputmode="decimal"> N</span></label></div>
+        <p id="guide-force-error" class="guide-input-error" role="alert" hidden></p>
+        <div class="guide-presets" role="group" aria-label="Try a contact-force request"><span>Try:</span><button data-force-preset="7">Exactly 7 N</button><button data-force-preset="8">Exactly 8 N</button><button data-force-preset="7.5">Exactly 7.5 N</button><button data-force-preset="6-8">6–8 N</button></div>
+        <p class="guide-small-note">Force is measured in newtons (N): how hard the sponge presses. The plan checks tested settings inside your request.</p>
+      </div>
+    </section>
+    <div class="guide-navigation"><span id="guide-selection-hint">Choose a card to begin.</span><button id="guide-next" class="guide-primary" disabled>See the team <span>→</span></button></div>
+  </section>
+  <section id="guide-step-2" class="guide-step" hidden>
+    <div class="guide-heading"><span class="guide-kicker" id="guide-job-recap"></span><h1 tabindex="-1">Who does this job?</h1><p id="guide-team-intro">The robot and its helper work together.</p></div>
+    <div class="guide-required-team" aria-live="polite"><span class="guide-kicker" id="guide-team-label">THIS JOB NEEDS</span><div id="guide-team-pair" class="guide-team-pair"></div><p id="guide-team-note"></p></div>
+    <div class="guide-team-layout">
+      <div class="guide-gallery"><div class="guide-optional-scene"><button type="button" id="guide-show-3d" class="guide-secondary" aria-expanded="false" aria-controls="team-stage">Show 3D team</button><p>Optional illustration. Your choices work without it.</p></div><div id="team-stage" class="team-stage" hidden><div id="team-model-loading"><span class="team-spinner"></span><strong>Loading the 3D team…</strong><span>You can keep planning without it.</span></div><div id="team-model-fallback" hidden>3D could not load. The choices below still work.</div></div><div id="guide-scene-tools" class="guide-scene-tools" hidden><span>Highlighted together = needed together</span><span id="guide-viewing-label" aria-live="polite">About G1</span></div><details class="guide-meet" id="guide-meet"><summary>Meet the team</summary><p>Choose a name to learn about it. The optional models show the same team.</p><div id="guide-model-tabs" class="guide-model-tabs" role="group" aria-label="Read about a team member"></div><p id="guide-model-description" class="guide-model-description" aria-live="polite"></p></details></div>
+      <div class="guide-people"><div class="guide-person" data-person="H1"><div class="guide-person-icon">♙</div><div><h2>Robot helper</h2><p id="guide-helper-role">Needed for this robot job</p></div><div class="guide-toggle" role="group" aria-label="Robot helper availability"><button data-person="H1" data-availability="AVAILABLE" aria-pressed="true">Free</button><button data-person="H1" data-availability="BUSY" aria-pressed="false">Busy</button></div></div><div class="guide-person" data-person="H2"><div class="guide-person-icon">♙</div><div><h2>Glass cleaner</h2><p id="guide-cleaner-role">Not trained to help this robot</p></div><div class="guide-toggle" role="group" aria-label="Glass cleaner availability"><button data-person="H2" data-availability="AVAILABLE" aria-pressed="true">Free</button><button data-person="H2" data-availability="BUSY" aria-pressed="false">Busy</button></div></div><details class="guide-other-example" id="guide-other-job-wrap" hidden><summary>Try a shared helper</summary><p>The planner considers a UR5 job first. If it can book the helper, G1 waits.</p><label class="guide-other-job"><input type="checkbox" id="guide-other-job">Add a UR5 job needing the same helper</label></details></div>
+    </div>
+    <div class="guide-area"><div><h2>Has the area been checked?</h2><p>Choose pretend conditions for this example.</p></div><div class="guide-area-options" role="group" aria-label="Example area checks"><button data-area="UNKNOWN" aria-pressed="true">? Not checked</button><button data-area="PASS" aria-pressed="false">✓ Checks passed</button><button data-area="FAIL" aria-pressed="false">⊘ Unsafe</button></div></div>
+    <div id="guide-contact-wrap" class="guide-area"><div><h2>Is work here allowed?</h2><p>Owner's permission to use or touch the selected place.</p></div><div class="guide-area-options" role="group" aria-label="Location contact permission"><button data-contact="UNKNOWN" aria-pressed="true">? Not checked</button><button data-contact="PASS" aria-pressed="false">✓ Allowed</button><button data-contact="FAIL" aria-pressed="false">⊘ Not allowed</button></div></div>
+    <div class="guide-navigation"><button data-back="1" class="guide-back">← Change job</button><button id="guide-check" class="guide-primary">Check my plan <span>→</span></button></div>
+  </section>
+  <section id="guide-step-3" class="guide-step" hidden>
+    <div class="guide-heading guide-result-heading"><span class="guide-kicker" id="guide-answer-recap"></span><h1 tabindex="-1">Your next step.</h1></div>
+    <div id="guide-preset-note" class="guide-preset-note" role="status" hidden></div>
+    <div id="guide-request-summary" class="guide-request-summary" aria-label="Your request"></div>
+    <div id="guide-result" class="guide-result" aria-live="polite" aria-busy="false"></div>
+    <div id="guide-error" class="error-panel" role="alert" hidden></div>
+    <details id="guide-why" class="guide-details"><summary>Why this answer?</summary><div id="guide-explanation"></div></details>
+    <section id="guide-whole-plan" class="customer-full-plan" hidden aria-label="Whole example plan"></section>
+    <div class="guide-navigation"><button data-back="2" class="guide-back">← Check the team</button><button id="guide-again" class="guide-secondary">Try another job ↗</button></div>
+  </section>
+  <footer class="guide-footer"><details><summary>About this demo &amp; model credits</summary><p>These are saved planning examples, with pretend current conditions. The 3D models are illustrations. The app cannot start robots or check a real workplace.</p><div id="team-model-credits"></div></details></footer>
+</section>
+  </main>
+  <dialog id="registry-dialog" aria-labelledby="registry-title">
+    <button id="registry-close" class="registry-close" type="button" aria-label="Close robots and results">×</button>
+    <div id="registry-content"></div>
+  </dialog>
+  <dialog id="walkthrough-dialog" aria-labelledby="walkthrough-title">
+    <div class="walkthrough-heading"><div><p class="walkthrough-kicker">A QUICK LOOK AROUND</p><h2 id="walkthrough-title">From a job to a plan.</h2></div><button id="walkthrough-close" type="button" aria-label="Close walkthrough">×</button></div>
+    <p class="walkthrough-intro">2 min 32 sec · Captions and quiet music, no narration. The example answers are invented.</p>
+    <p class="walkthrough-intro walkthrough-scope">See how to make a plan, download its PDF and record what happened afterwards. The supervisor’s check is a separate step.</p>
+    <video id="walkthrough-video" controls playsinline preload="none" poster="/assets/walkthrough-poster.jpg" aria-label="Captioned walkthrough of planning a cleaning job">
+      <source src="/assets/planning-walkthrough.mp4" type="video/mp4">
+      <track kind="chapters" src="/assets/walkthrough-chapters.vtt" srclang="en" label="Tour steps" default>
+      <track kind="captions" src="/assets/walkthrough-captions.vtt" srclang="en" label="English captions">
+      <p>Your browser cannot play this video. You can read the steps below.</p>
+    </video>
+    <p id="walkthrough-error" role="status" hidden>The video could not load. You can still read the steps below and use the planner.</p>
+    <details class="walkthrough-transcript"><summary>Read the walkthrough</summary><ol id="walkthrough-steps"><li>Name the building and choose the jobs. The one-click examples use invented answers.</li><li>Check who is free and what they are trained to do. This demo has two example people and two stages.</li><li>Answer the place and work checks. Leave anything unknown as Not checked.</li><li>Record your assessment. The app records what you say; it does not inspect the building.</li><li>Read who is assigned and what must wait. Open Why this result? for the reasons and missing robot evidence.</li><li>A busy person cannot take another job in the same stage. A failed room check stops all jobs in that room.</li><li>Try the separate tested examples for robot options. The G1 example uses recorded simulation evidence and invented current conditions. A free helper still needs to give a separate practice OK.</li><li>Download a readable PDF to print or share. Exact JSON remains an optional research export or notebook backup.</li><li>Use Robots & results to save new robots and test results. These notes do not change the plans or qualify a robot.</li><li>At the bottom of a plan, open After the work and choose Record a job outcome.</li><li>Pick the planned job. Record what happened, who did it and whether extra help was needed. Save the outcome.</li><li>The supervisor’s acceptance or request for more work is recorded separately on the saved note. The name is typed, not verified.</li><li>Changing the outcome removes its old check. It must be checked again. Examples remain labelled as invented and do not count as real work.</li><li>The app never starts a robot.</li></ol></details>
+  </dialog>
+</body>
+</html>

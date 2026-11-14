@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "name": "UR3 and UR5",
+      "credit": "Universal Robots ROS2 Description contributors. Original visual meshes converted to GLB and posed for display; no private controller code included. Gallery display heights are normalized and are not to scale.",
+      "license": "BSD-3-Clause",
+      "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/tree/78c5afd8bfee78a459c0265304340a85f1d44792"
+    },
+    {
+      "name": "G1",
+      "credit": "Unitree Robotics, copyright 2016\u20132022 HangZhou YuShu TECHNOLOGY CO., LTD. Vendor 29-DOF display variant, posed and converted to GLB. This is not the exact five-finger Isaac asset used for the recorded evidence. The stand is schematic. Gallery display heights are normalized and are not to scale.",
+      "license": "BSD-3-Clause",
+      "url": "https://github.com/unitreerobotics/unitree_ros/tree/41dec58c7a3ccb3050243ef16ac2ca74b2b0f9ca/robots/g1_description"
+    },
+    {
+      "name": "Robot helper and glass cleaner",
+      "credit": "Background Posed Humans by Quaternius. Standing bodies and hairstyles converted to GLB with matte clothing, skin and hair materials. Illustrative people, not actual participants. Display sizes are normalized.",
+      "license": "CC0 1.0",
+      "url": "https://quaternius.com/packs/backgroundposedhumans.html"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "researchedOn": "2026-11-10",
+  "scope": "Manufacturer-described equipment to investigate. These products are not in the declared team, are not tested here and cannot be assigned by this planner. The list is not a ranking or purchasing recommendation.",
+  "options": [
+    {
+      "id": "ozmo",
+      "name": "Ozmo",
+      "manufacturer": "Skyline Robotics",
+      "taskTypes": [
+        "facade"
+      ],
+      "kind": "Robotic arm system",
+      "summary": "The manufacturer describes robotic exterior-window cleaning using a building maintenance platform.",
+      "checks": [
+        "Compatible building access platform and installation",
+        "Facade geometry, glazing and cleaning method",
+        "Exclusion area, trained staff and a site trial"
+      ],
+      "sourceUrl": "https://www.skylinerobotics.com/",
+      "sourceTitle": "Skyline Robotics: Ozmo and existing maintenance units",
+      "status": "not_in_team"
+    },
+    {
+      "id": "kite",
+      "name": "Kite facade-cleaning robot",
+      "manufacturer": "Kite Robotics",
+      "taskTypes": [
+        "facade"
+      ],
+      "kind": "Cable-supported robot",
+      "summary": "The manufacturer describes a rotating brush moved across a facade by four cables and winches.",
+      "checks": [
+        "Building-specific anchors and cable arrangement",
+        "Brush access to frames, recesses and facade materials",
+        "Weather limits, public protection and cleaning-quality trial"
+      ],
+      "sourceUrl": "https://www.kiterobotics.com/en/the-robot/",
+      "sourceTitle": "Kite Robotics: the robot",
+      "status": "not_in_team"
+    },
+    {
+      "id": "sherpa",
+      "name": "Sherpa cleaning drone",
+      "manufacturer": "Lucid Bots",
+      "taskTypes": [
+        "facade"
+      ],
+      "kind": "Pilot-operated drone",
+      "summary": "The manufacturer describes exterior washing with ground-fed water or solution. A pilot controls the drone and a ground crew supports it.",
+      "checks": [
+        "Trained pilot, ground crew and local flight permissions",
+        "Weather, airspace, hoses and keeping the public clear",
+        "Surface/product compatibility, runoff and a test panel; spraying may not replace scrubbing"
+      ],
+      "sourceUrl": "https://www.lucidbots.com/sherpa-drone",
+      "sourceTitle": "Lucid Bots: Sherpa cleaning drone",
+      "status": "not_in_team"
+    },
+    {
+      "id": "kira-b50",
+      "name": "KIRA B 50",
+      "manufacturer": "Karcher",
+      "taskTypes": [
+        "floor"
+      ],
+      "kind": "Floor scrubber-dryer",
+      "summary": "The manufacturer describes robotic scrubbing and drying for medium to large hard-floor areas.",
+      "checks": [
+        "Floor material, slope, load and water tolerance",
+        "Route clearance, steps, low obstacles and people",
+        "Staff instruction, servicing and a site cleaning trial"
+      ],
+      "sourceUrl": "https://www.karcher.com/gb/en/professional/products/cleaning-robots-c6331",
+      "sourceTitle": "Karcher: professional cleaning robots",
+      "status": "not_in_team"
+    },
+    {
+      "id": "kira-cv50",
+      "name": "KIRA CV 50",
+      "manufacturer": "Karcher",
+      "taskTypes": [
+        "floor"
+      ],
+      "kind": "Floor vacuum robot",
+      "summary": "The manufacturer lists robotic vacuum cleaning for medium-sized carpeted and hard-floor areas.",
+      "checks": [
+        "Dry vacuuming matches the requested cleaning outcome",
+        "Floor and route suitability, obstacles and people",
+        "Operator instruction, docking and a site cleaning trial"
+      ],
+      "sourceUrl": "https://www.karcher.com/gb/en/professional/products/cleaning-robots-c6331",
+      "sourceTitle": "Karcher: professional cleaning robots",
+      "status": "not_in_team"
+    },
+    {
+      "id": "winbot-w2-pro",
+      "name": "WINBOT W2 PRO OMNI",
+      "manufacturer": "ECOVACS",
+      "taskTypes": [
+        "glass"
+      ],
+      "kind": "Consumer window robot",
+      "summary": "This consumer-facing product page describes a portable window-cleaning robot. It does not establish suitability or permitted commercial use for this job.",
+      "checks": [
+        "Exact pane dimensions, glass type and permitted use in its manual",
+        "Safe placement/retrieval, fall protection and supervision",
+        "Cleaning outcome, commercial-use terms and a site trial"
+      ],
+      "sourceUrl": "https://www.ecovacs.com/uk/campaign/ces-robot-window-cleaner-winbot",
+      "sourceTitle": "ECOVACS UK: WINBOT comparison",
+      "status": "not_in_team"
+    }
+  ]
+}

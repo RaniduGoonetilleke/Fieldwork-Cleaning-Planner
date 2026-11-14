@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "release": "manager-pack-r5-20261114",
+  "checkedOn": "2026-11-14",
+  "counts": {
+    "pythonTests": 309,
+    "javascriptTestFiles": 15
+  },
+  "summary": "These are software checks of the planning calculation and this page. They check the stated behavior for the inputs tested; they do not measure planning benefit.",
+  "checks": [
+    {
+      "name": "Python tests",
+      "result": "309 passed on this release with Python 3.12.14",
+      "shows": "The planning service gives the expected answer for each tested input, refuses malformed input and refuses an altered download. It also refuses a request that carries a job review."
+    },
+    {
+      "name": "JavaScript test files",
+      "result": "15 passed on this release with Node 24.22.1",
+      "shows": "The page’s own logic is tested directly: stale assessments, explanations, exact downloads, the notebook store and the job-review notes. The job-review tests include that changing an outcome removes its recorded check, and that a note tied to a plan cannot be retyped under the old plan link. They also include that a form opened on an earlier version of a note is refused once the saved note has changed, and that a note from a plan made from an invented example stays out of the counts. Two files check the page source for required safeguards. How the page behaves in use is covered by the browser walk-through. The report tests check that readable exports preserve statuses, force requests and choices, declared conditions, separate outcome checks and exact JSON backups."
+    },
+    {
+      "name": "Release file check",
+      "result": "Every listed file matches",
+      "shows": "The files are the ones this release was checked with."
+    },
+    {
+      "name": "Research records",
+      "result": "19 files match their recorded fingerprints",
+      "shows": "The robot records and decision rules are unchanged copies from the corrected research package."
+    },
+    {
+      "name": "Two-person staffing",
+      "result": "5,460 skill patterns, no disagreement",
+      "shows": "With two people and up to six ready jobs in a stage, the staffing step staffs as many jobs as a brute-force search in either listed order, and it chooses the earliest listed jobs that can be staffed together. This enumeration was performed on the earlier app; the staffing procedure is unchanged."
+    },
+    {
+      "name": "Earlier job-review browser checks",
+      "result": "516 checks reported for job-reviews-r3-20261113",
+      "shows": "These checks belong to the earlier release. The current update changes only presentation and release identity; its own customer-screen checks are documented separately in the README. The earlier checks are not presented as a new run on this copy."
+    },
+    {
+      "name": "Earlier customer screen checks",
+      "result": "44 pass in Chromium at desktop and phone widths",
+      "shows": "These 44 checks belong to customer-view-20261113. This release has separate checks of the readable PDF controls, six generated PDFs, optional JSON/replay and updated tour; see README."
+    },
+    {
+      "name": "Earlier PDF and walkthrough checks",
+      "result": "Six PDF examples / 18 pages; 116-second video",
+      "shows": "Real browser PDF generation and page layout were inspected. The video decodes and plays, and closing its dialog pauses it. Optional exact JSON replay still returns the same plan. These are presentation checks, not evidence of user benefit. The PDF checks belong to manager-pack-20261113; the following presentation update changes the walkthrough only."
+    },
+    {
+      "name": "Earlier walkthrough presentation (r2)",
+      "result": "18 scenes reviewed; video decoded and played",
+      "shows": "The larger chapter cards and close-up app screens were inspected. Three targeted JavaScript contract checks passed again. Local desktop Chromium playback and pause-on-close were checked; the full earlier test suite was not rerun for this presentation-only update."
+    },
+    {
+      "name": "Side-panel walkthrough (r3)",
+      "result": "18 title panels reviewed; 152-second video decoded and played",
+      "shows": "The panels slide in from the left, hold for 2.5 seconds and retract left. The badges and captions stay visible, and the earlier screen-reading time is preserved. Local Chromium playback and pause-on-close passed. This is a presentation check; the full software suite was not rerun."
+    }
+  ],
+  "notShown": [
+    "No reliability figure. A count of passing tests is not a measured success rate.",
+    "No user study. Nobody outside the team has been timed or observed using this page.",
+    "No evidence that planning this way is faster or better than a competent person, and no comparison with another planner.",
+    "No safety approval. Answers are declarations, and nobody inspected a building.",
+    "No measurement of cleaning. No record here shows how clean any surface ends up.",
+    "No job review from real work. The job-review step has only been tried with invented entries.",
+    "No live robot. The page cannot connect to, start or stop a robot.",
+    "No formal accessibility audit."
+  ]
+}

@@ -1,0 +1,23 @@
+.walkthrough-open { display: inline-flex; align-items: center; gap: .5rem; }
+.walkthrough-open span { font-size: .7em; }
+#walkthrough-dialog { width: min(1000px, calc(100vw - 32px)); max-width: calc(100vw - 32px); max-height: calc(100dvh - 32px); box-sizing: border-box; padding: 24px; border: 1px solid #36544c; border-radius: 22px; background: #12201d; color: #edf4ef; box-shadow: 0 20px 80px #0008; }
+#walkthrough-dialog::backdrop { background: #06100ce0; }
+.walkthrough-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.walkthrough-kicker { margin: 0 0 8px; font: 600 11px/1.4 system-ui, sans-serif; letter-spacing: .1em; color: #c0d6cb; }
+#walkthrough-title { margin: 0; font: 500 clamp(24px, 4vw, 34px)/1.2 Georgia, serif; }
+#walkthrough-close { flex: 0 0 42px; min-height: 42px; border-radius: 50%; border: 1px solid #5a7569; background: transparent; color: inherit; font-size: 28px; cursor: pointer; }
+.walkthrough-intro { color: #c9dbd2; font: 400 14px/1.6 system-ui, sans-serif; }
+#walkthrough-video { width: 100%; display: block; aspect-ratio: 16 / 9; background: #09130f; border-radius: 12px; }
+.walkthrough-transcript { margin-top: 18px; font: 400 14px/1.65 system-ui, sans-serif; }
+.walkthrough-transcript summary { cursor: pointer; padding: 10px 0; font-weight: 600; }
+.walkthrough-transcript li { margin: 0 0 10px; padding-left: 4px; }
+#walkthrough-error { padding: 12px; border: 1px solid #d6b782; border-radius: 8px; }
+[data-theme="light"] #walkthrough-dialog { background: #f7f8f2; color: #153a2c; border-color: #b5c9bc; }
+[data-theme="light"] .walkthrough-intro, [data-theme="light"] .walkthrough-kicker { color: #4d6559; }
+#walkthrough-dialog button:focus-visible, #walkthrough-dialog summary:focus-visible, #walkthrough-video:focus-visible { outline: 3px solid #e5c784; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .shell-header { flex-wrap: wrap; gap: 12px; }
+  .shell-tools { flex-wrap: wrap; gap: 6px; }
+  .shell-tools button { min-height: 42px; padding: 8px 11px; font-size: 12px; }
+  #walkthrough-dialog { padding: 16px; width: calc(100vw - 16px); max-height: calc(100dvh - 16px); }
+}

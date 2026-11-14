@@ -1,0 +1,5 @@
+pdf-lib 1.17.1, MIT licence (see LICENSE.md).
+Browser ES module copied unchanged from an installed copy of pdf-lib 1.17.1.
+Upstream: https://github.com/Hopding/pdf-lib
+Package: https://www.npmjs.com/package/pdf-lib/v/1.17.1
+No CDN or network request is used by the application.

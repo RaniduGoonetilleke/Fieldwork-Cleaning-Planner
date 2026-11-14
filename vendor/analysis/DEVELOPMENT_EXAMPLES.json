@@ -1,0 +1,5233 @@
+{
+  "count": 29,
+  "examples": [
+    {
+      "after_synthetic_confirmation": null,
+      "first": {
+        "binding": "a745f07fc671744ca4afc7031bd2d6102abcd742d6a48118f7ab87c4875f3147",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR3": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR5": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          }
+        },
+        "shared_safety": "UNKNOWN",
+        "snapshot_id": "AUTHORED_OFFLINE_UNKNOWN"
+      },
+      "live_semantics": "Unobserved now",
+      "name": "G1_A_7N_live_UNKNOWN",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_A_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "binding": "29fa15014fdfcd6d8b7476de971119789bed1986ffc2defb35663ef9bd277221",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location A, the anchor, run 1 (direct-confirmation release). r19 part_B evidence-stage assessment. A single deterministic observation. Its evidence was reused after a retrospective check of its planned footprint against the later spatial panel, which was not a pre-run input; its trajectory matches the latch-diagnostic run in every shared reduced field, so it adds no varied-scene or repeat evidence; A lies 20 mm from C. Not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "f1633a086f29db48d351e76aab08b50a8c6cf3fe8a02c00cec2706b0f2adfa35",
+          "force_setpoint_n": 7.0,
+          "id": "G1_A_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.048505,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.001171,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 0.982534,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 93.75,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 68.2874,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 1 (direct-confirmation release)",
+            "evidence reused after a retrospective footprint check against the later spatial panel (not a pre-run input)",
+            "trajectory matches the latch-diagnostic run in every shared reduced field; no varied-scene or repeat evidence",
+            "20 mm from C",
+            "no windowed maximum force error reported in the accepted review"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_direct_confirm_pilot_r1_release_20260925/point_direct_confirm_pilot_r1/point_spec.py": "fbf22b4c9c018e06014372738b12ca8811c92a8f664be0840b543d085f04013a",
+            "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617"
+          },
+          "target": "A"
+        },
+        "decision": "SELECT",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_A_7N"
+        ]
+      },
+      "first": {
+        "binding": "29fa15014fdfcd6d8b7476de971119789bed1986ffc2defb35663ef9bd277221",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location A, the anchor, run 1 (direct-confirmation release). r19 part_B evidence-stage assessment. A single deterministic observation. Its evidence was reused after a retrospective check of its planned footprint against the later spatial panel, which was not a pre-run input; its trajectory matches the latch-diagnostic run in every shared reduced field, so it adds no varied-scene or repeat evidence; A lies 20 mm from C. Not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "f1633a086f29db48d351e76aab08b50a8c6cf3fe8a02c00cec2706b0f2adfa35",
+          "force_setpoint_n": 7.0,
+          "id": "G1_A_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.048505,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.001171,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 0.982534,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 93.75,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 68.2874,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 1 (direct-confirmation release)",
+            "evidence reused after a retrospective footprint check against the later spatial panel (not a pre-run input)",
+            "trajectory matches the latch-diagnostic run in every shared reduced field; no varied-scene or repeat evidence",
+            "20 mm from C",
+            "no windowed maximum force error reported in the accepted review"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_direct_confirm_pilot_r1_release_20260925/point_direct_confirm_pilot_r1/point_spec.py": "fbf22b4c9c018e06014372738b12ca8811c92a8f664be0840b543d085f04013a",
+            "point_direct_confirm_pilot_r1_results_review_20260925/REVIEW.md": "be1d9c7dd92b9520a99f787aa4432e01bb9cc8e6bdb740024017a5a67be4c617"
+          },
+          "target": "A"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_A_7N"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR3": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR5": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "G1_A_7N_live_PASS",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_A_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "first": {
+        "binding": "bcbbd29f33639673ec0da0150f7049809b05354a7409d84511bd48bc59a91d34",
+        "candidate_reasons": {
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR3": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR5": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          }
+        },
+        "shared_safety": "UNKNOWN",
+        "snapshot_id": "AUTHORED_OFFLINE_UNKNOWN"
+      },
+      "live_semantics": "Unobserved now",
+      "name": "G1_B_7N_live_UNKNOWN",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "B"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_B_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "binding": "6c8476b006758dedf385de8ab5b528a70170b53eebb59f8a0f561b0886249db6",
+        "candidate_reasons": {
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location B (+8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_B_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.048097225595427354,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.22620939123324568,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.005952743600581,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 1.0962853346056713,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 99.125,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 71.51866766272262,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "final right-wrist-pitch range 1.1920928955e-5 rad, above the earlier 1e-5 rad diagnostic screen; ordinary hold rule passes"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "B"
+        },
+        "decision": "SELECT",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_B_7N"
+        ]
+      },
+      "first": {
+        "binding": "6c8476b006758dedf385de8ab5b528a70170b53eebb59f8a0f561b0886249db6",
+        "candidate_reasons": {
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location B (+8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_B_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.048097225595427354,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.22620939123324568,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.005952743600581,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 1.0962853346056713,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 99.125,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 71.51866766272262,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "final right-wrist-pitch range 1.1920928955e-5 rad, above the earlier 1e-5 rad diagnostic screen; ordinary hold rule passes"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "B"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_B_7N"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR3": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR5": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "G1_B_7N_live_PASS",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "B"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_B_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "first": {
+        "binding": "6bea45e019c238257c2bb359d6cfbd75a3ce367288320d151cd10a8781ed31a4",
+        "candidate_reasons": {
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR3": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR5": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          }
+        },
+        "shared_safety": "UNKNOWN",
+        "snapshot_id": "AUTHORED_OFFLINE_UNKNOWN"
+      },
+      "live_semantics": "Unobserved now",
+      "name": "G1_C_7N_live_UNKNOWN",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "C"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_C_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "binding": "c2c7be37b14a4d14c7244ad5a02480e07030639131f87cf0f4ce2e272ead810c",
+        "candidate_reasons": {
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location C (-8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location, 20 mm from A; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_C_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.05180726394773968,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.2412338925507811,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.001219009601492,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 1.1084879605507887,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 93.875,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 67.77074921074785,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "20 mm from A",
+            "marker 11.90 % hidden in the native detector frame"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "C"
+        },
+        "decision": "SELECT",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_C_7N"
+        ]
+      },
+      "first": {
+        "binding": "c2c7be37b14a4d14c7244ad5a02480e07030639131f87cf0f4ce2e272ead810c",
+        "candidate_reasons": {
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location C (-8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location, 20 mm from A; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_C_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.05180726394773968,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.2412338925507811,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.001219009601492,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 1.1084879605507887,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 93.875,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 67.77074921074785,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "20 mm from A",
+            "marker 11.90 % hidden in the native detector frame"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "C"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_C_7N"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR3": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR5": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "G1_C_7N_live_PASS",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "C"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_C_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "first": {
+        "binding": "ff705902694d78644809690bb5bf19d299eb411b4cb2d84a1ae5965c621637bc",
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR3": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR5": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          }
+        },
+        "shared_safety": "UNKNOWN",
+        "snapshot_id": "AUTHORED_OFFLINE_UNKNOWN"
+      },
+      "live_semantics": "Unobserved now",
+      "name": "G1_D_7N_live_UNKNOWN",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_D_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "binding": "982a6f7253ea65d1081e8a4471f4d0b32e3c7b4bd5bc8ca464f429dcd1cdabac",
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location D (+8 cm z), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; the marker was 58.65 % hidden in the native detector frame and the target error was 4.129 mm; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_D_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.04794851230404908,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.34485120590670704,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.004439106798887,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 4.12910298134153,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 95.75,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 70.1532426135274,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "marker 58.65 % hidden in the native detector frame; target error 4.129 mm, the largest of the four"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "D"
+        },
+        "decision": "SELECT",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_D_7N"
+        ]
+      },
+      "first": {
+        "binding": "982a6f7253ea65d1081e8a4471f4d0b32e3c7b4bd5bc8ca464f429dcd1cdabac",
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location D (+8 cm z), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; the marker was 58.65 % hidden in the native detector frame and the target error was 4.129 mm; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_D_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.04794851230404908,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.34485120590670704,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.004439106798887,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 4.12910298134153,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 95.75,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 70.1532426135274,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "marker 58.65 % hidden in the native detector frame; target error 4.129 mm, the largest of the four"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "D"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_D_7N"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR3": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR5": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "G1_D_7N_live_PASS",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_D_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "first": {
+        "binding": "ea1acdf2b7811e40e623d4137e6a9c39ddf6164100cfead24f34f629bc60fbdf",
+        "candidate_reasons": {
+          "UR3_registered_handover": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_B_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_C_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_D_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR3": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR5": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          }
+        },
+        "shared_safety": "UNKNOWN",
+        "snapshot_id": "AUTHORED_OFFLINE_UNKNOWN"
+      },
+      "live_semantics": "Unobserved now",
+      "name": "UR3_registered_handover_live_UNKNOWN",
+      "request": {
+        "accepted_evidence_levels": [
+          "physical-published"
+        ],
+        "allowed_modes": [
+          "explicit_command_confirmation_STOP"
+        ],
+        "allowed_targets": [
+          "registered_cube"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "gesture_handover",
+        "context": "published_single_operator_registered_cubes",
+        "domain": "physical",
+        "force": null,
+        "id": "example_UR3_registered_handover",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "task": "published_registered_cube_handover"
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": {
+        "binding": "ff1cc96cfaf8b685d7feda51fe3f85e0e54bc293965c902a1a8aa3f1a3a3df60",
+        "candidate_reasons": {
+          "UR3_registered_handover": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "r19 part_B qualitative physical demonstration; no organic fatigue, second deliberate confirmation, measured latency or force-regulation guarantee",
+          "capability": "gesture_handover",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "published_single_operator_registered_cubes",
+          "domain": "physical",
+          "evidence_ids": [
+            "UR3-02",
+            "UR3-11",
+            "UR3-18"
+          ],
+          "evidence_level": "physical-published",
+          "evidence_sha256": "453515f800def9f7e5c5acc8ba21d36dcdb100ab2987a4e640972b45bc85f040",
+          "force_setpoint_n": null,
+          "id": "UR3_registered_handover",
+          "metrics": [],
+          "mode": "explicit_command_confirmation_STOP",
+          "platform": "UR3",
+          "qualifiers": [
+            "record status: DEMONSTRATED-QUALITATIVE",
+            "one operator; registered-cube fetch-and-deliver with handover",
+            "transitions verified by live observation of the RViz state display and Gazebo behaviour, so not hardware-only (UR3-02)",
+            "no completion count or success rate reported (UR3-18); no per-transition log (UR3-02)",
+            "fatigue bands and soft-stop on injected inputs",
+            "second confirmation of a fatigued handover not established as a separate action"
+          ],
+          "settings": {
+            "task": "published_registered_cube_handover"
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793"
+          },
+          "target": "registered_cube"
+        },
+        "decision": "SELECT",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_B_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_C_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_D_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "UR3_registered_handover"
+        ]
+      },
+      "first": {
+        "binding": "ff1cc96cfaf8b685d7feda51fe3f85e0e54bc293965c902a1a8aa3f1a3a3df60",
+        "candidate_reasons": {
+          "UR3_registered_handover": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "r19 part_B qualitative physical demonstration; no organic fatigue, second deliberate confirmation, measured latency or force-regulation guarantee",
+          "capability": "gesture_handover",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "published_single_operator_registered_cubes",
+          "domain": "physical",
+          "evidence_ids": [
+            "UR3-02",
+            "UR3-11",
+            "UR3-18"
+          ],
+          "evidence_level": "physical-published",
+          "evidence_sha256": "453515f800def9f7e5c5acc8ba21d36dcdb100ab2987a4e640972b45bc85f040",
+          "force_setpoint_n": null,
+          "id": "UR3_registered_handover",
+          "metrics": [],
+          "mode": "explicit_command_confirmation_STOP",
+          "platform": "UR3",
+          "qualifiers": [
+            "record status: DEMONSTRATED-QUALITATIVE",
+            "one operator; registered-cube fetch-and-deliver with handover",
+            "transitions verified by live observation of the RViz state display and Gazebo behaviour, so not hardware-only (UR3-02)",
+            "no completion count or success rate reported (UR3-18); no per-transition log (UR3-02)",
+            "fatigue bands and soft-stop on injected inputs",
+            "second confirmation of a fatigued handover not established as a separate action"
+          ],
+          "settings": {
+            "task": "published_registered_cube_handover"
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793"
+          },
+          "target": "registered_cube"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_B_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_C_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_D_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "UR3_registered_handover"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR3": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR5": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "UR3_registered_handover_live_PASS",
+      "request": {
+        "accepted_evidence_levels": [
+          "physical-published"
+        ],
+        "allowed_modes": [
+          "explicit_command_confirmation_STOP"
+        ],
+        "allowed_targets": [
+          "registered_cube"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "gesture_handover",
+        "context": "published_single_operator_registered_cubes",
+        "domain": "physical",
+        "force": null,
+        "id": "example_UR3_registered_handover",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "task": "published_registered_cube_handover"
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "first": {
+        "binding": "1b6d19fef43922c642c9e27c0f8cf1db287f8b37c3be2c2f38c513634d7146ee",
+        "candidate_reasons": {
+          "UR5_whiteboard_detection": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_B_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_C_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_D_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "UNKNOWN",
+              "path": "UNKNOWN",
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "UNKNOWN",
+              "visible_target": "UNKNOWN"
+            },
+            "safety": "UNKNOWN"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR3": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          },
+          "UR5": {
+            "availability": "UNKNOWN",
+            "safety": "UNKNOWN"
+          }
+        },
+        "shared_safety": "UNKNOWN",
+        "snapshot_id": "AUTHORED_OFFLINE_UNKNOWN"
+      },
+      "live_semantics": "Unobserved now",
+      "name": "UR5_whiteboard_detection_live_UNKNOWN",
+      "request": {
+        "accepted_evidence_levels": [
+          "physical-report"
+        ],
+        "allowed_modes": [
+          "reported_static_detection"
+        ],
+        "allowed_targets": [
+          "taped_region"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "target_detection",
+        "context": "reported_indoor_whiteboard_taped_target",
+        "domain": "physical",
+        "force": null,
+        "id": "example_UR5_whiteboard_detection",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "task": "reported_static_whiteboard_detection"
+        }
+      }
+    },
+    {
+      "after_synthetic_confirmation": null,
+      "first": {
+        "binding": "bb122ec836c68ec6877875789f8eb35846a528917842d10a385523ed335d14bc",
+        "candidate_reasons": {
+          "UR5_whiteboard_detection": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "r19 part_B report-level assessment; not independently reproduced, not dynamic tracking, contact execution or interface integration",
+          "capability": "target_detection",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": false,
+          "context": "reported_indoor_whiteboard_taped_target",
+          "domain": "physical",
+          "evidence_ids": [
+            "UR5-03",
+            "UR5-15"
+          ],
+          "evidence_level": "physical-report",
+          "evidence_sha256": "453515f800def9f7e5c5acc8ba21d36dcdb100ab2987a4e640972b45bc85f040",
+          "force_setpoint_n": null,
+          "id": "UR5_whiteboard_detection",
+          "metrics": [],
+          "mode": "reported_static_detection",
+          "platform": "UR5",
+          "qualifiers": [
+            "record status: REPORTED",
+            "whiteboard surrogate with a taped frame; glass untested",
+            "evaluation set not named; no held-out test",
+            "not independently reproduced; no logs"
+          ],
+          "settings": {
+            "task": "reported_static_whiteboard_detection"
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793"
+          },
+          "target": "taped_region"
+        },
+        "decision": "SELECT",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_B_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_C_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "G1_D_7N": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "offline selection within supplied assessments; no dispatch"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "UR5_whiteboard_detection"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR3_registered_handover": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "UR5_whiteboard_detection": {
+            "checks": {
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR3": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          },
+          "UR5": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "UR5_whiteboard_detection_live_PASS",
+      "request": {
+        "accepted_evidence_levels": [
+          "physical-report"
+        ],
+        "allowed_modes": [
+          "reported_static_detection"
+        ],
+        "allowed_targets": [
+          "taped_region"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "target_detection",
+        "context": "reported_indoor_whiteboard_taped_target",
+        "domain": "physical",
+        "force": null,
+        "id": "example_UR5_whiteboard_detection",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "task": "reported_static_whiteboard_detection"
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "5196cba4b40df0b30433f72ee25af7b02c3c07b9595b16095f4bcb04d2ecaa0e",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "ASK",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {},
+        "preference_trace": [],
+        "reasons": [
+          "several supported options; explicit preference/choice needed"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_A_7N",
+          "G1_B_7N",
+          "G1_C_7N",
+          "G1_D_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "no_preference",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_A_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "d911a13fd9ced2cdf2327dded869b6abf9f91a8fdb50e223c148c46c5cbe9793",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location D (+8 cm z), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; the marker was 58.65 % hidden in the native detector frame and the target error was 4.129 mm; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_D_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.04794851230404908,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.34485120590670704,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.004439106798887,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 4.12910298134153,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 95.75,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 70.1532426135274,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "marker 58.65 % hidden in the native detector frame; target error 4.129 mm, the largest of the four"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "D"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {},
+        "preference_trace": [
+          {
+            "applied": true,
+            "basis": "Illustrative task-owner site order; no efficiency/quality ranking",
+            "field": "id"
+          }
+        ],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_D_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "declared_site_preference",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "candidate_priority": [
+          "G1_D_7N",
+          "G1_B_7N",
+          "G1_C_7N",
+          "G1_A_7N"
+        ],
+        "candidate_priority_basis": "Illustrative task-owner site order; no efficiency/quality ranking",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_A_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "1806286a8d50ae2be343dffe273a9772712b38f91e101d4c44eec737b6c070eb",
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_B_7N": [
+            "setpoint"
+          ],
+          "G1_C_7N": [
+            "setpoint",
+            "target"
+          ],
+          "G1_D_7N": [
+            "setpoint",
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "untested_10N",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "B"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "authored exact request",
+          "maximum_n": 10.0,
+          "minimum_n": 10.0
+        },
+        "id": "example_G1_B_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "59fac1d93422177f528b148c0b15386663479947fbf800ae6607db9db212cd0d",
+        "candidate_reasons": {
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location B (+8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_B_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.048097225595427354,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.22620939123324568,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.005952743600581,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 1.0962853346056713,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 99.125,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 71.51866766272262,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "final right-wrist-pitch range 1.1920928955e-5 rad, above the earlier 1e-5 rad diagnostic screen; ordinary hold rule passes"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "B"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_B_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "owner_range_6_to_8N",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "B"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "authored owner-authorised setpoint range",
+          "maximum_n": 8.0,
+          "minimum_n": 6.0
+        },
+        "id": "example_G1_B_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "b123a161136ae5b672ed617355dd85d381f55b700bf479310686d74a0a40278c",
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "domain",
+            "target"
+          ],
+          "G1_B_7N": [
+            "domain"
+          ],
+          "G1_C_7N": [
+            "domain",
+            "target"
+          ],
+          "G1_D_7N": [
+            "domain",
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "physical_G1",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "B"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "physical",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_B_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "f0f06ef48a4f86a5923533f67ab21d211110a2f06d953f607618ac454f60213f",
+        "candidate_reasons": {},
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ],
+          "UR3_registered_handover": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ],
+          "UR5_whiteboard_detection": [
+            "capability",
+            "context",
+            "domain",
+            "evidence_level",
+            "mode",
+            "settings",
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "no record for the requested capability, domain, context, target, mode, settings, setpoint and evidence level"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "untested_site",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "NEW_SITE"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_B_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "6c5b6ce08ecc216ccf91260ac1cd6fdeeed7c6dd8e57c891ca3b91f315c11de5",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "ASK",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {},
+        "preference_trace": [],
+        "reasons": [
+          "several supported options; explicit preference/choice needed"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_A_7N",
+          "G1_B_7N",
+          "G1_C_7N",
+          "G1_D_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "frozen_criteria_A_to_D",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_frozen_criteria_A_to_D",
+        "metrics": [
+          {
+            "bound": 90.0,
+            "comparison": "value_at_least",
+            "quantity": "moving_service",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "task_rule_right_active_idle_left_maintained",
+            "statistic": "fraction_of_samples",
+            "unit": "percent",
+            "window": "declared_4s_scored_window_800_samples"
+          },
+          {
+            "bound": 25.0,
+            "comparison": "value_at_least",
+            "quantity": "qualified_travel",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "path_length",
+            "unit": "mm",
+            "window": "declared_4s_scored_window_800_samples"
+          },
+          {
+            "bound": 10.0,
+            "comparison": "value_at_most",
+            "quantity": "in_plane_target_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "declared_target_marker",
+            "statistic": "single_selection",
+            "unit": "mm",
+            "window": "selection_stage_detector_frame"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "task criteria frozen before execution (service, qualified travel, target identity)"
+    },
+    {
+      "first": {
+        "binding": "4d57f44ad6865661a33c70ed5fe1c0214ed615414af1ec8f89cfbc7400b746eb",
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location D (+8 cm z), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; the marker was 58.65 % hidden in the native detector frame and the target error was 4.129 mm; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_D_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.04794851230404908,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.34485120590670704,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.004439106798887,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 4.12910298134153,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 95.75,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 70.1532426135274,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "marker 58.65 % hidden in the native detector frame; target error 4.129 mm, the largest of the four"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "D"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_D_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "post_hoc_D_rmse_le_0p1N",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_post_hoc_D_rmse_le_0p1N",
+        "metrics": [
+          {
+            "bound": 0.1,
+            "comparison": "value_at_most",
+            "quantity": "normal_force_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "RMSE",
+            "unit": "N",
+            "window": "declared_4s_scored_window_800_samples"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "threshold chosen after outcomes were known"
+    },
+    {
+      "first": {
+        "binding": "ef94c4133fe80663578f6f590d91fd8cdaabe05545d57c3ad0bb3c0f7d0d4f3b",
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [
+              "recorded metric outside requested bound:1142f354acf4"
+            ],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "REFUSE",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "every applicable configuration fails a guard"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "post_hoc_D_max_le_0p3N",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_post_hoc_D_max_le_0p3N",
+        "metrics": [
+          {
+            "bound": 0.3,
+            "comparison": "magnitude_at_most",
+            "quantity": "normal_force_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "maximum_absolute",
+            "unit": "N",
+            "window": "declared_4s_scored_window_800_samples"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "threshold chosen after outcomes were known"
+    },
+    {
+      "first": {
+        "binding": "4e7c5d986d4330503677864a1d6c54d7f2bb5975a295005d8f2b597f9ee68b38",
+        "candidate_reasons": {
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": {
+          "assessment_basis": "Location B (+8 cm y), run 2 (spatial release). r19 part_B evidence-stage assessment. A single deterministic observation at this tested location; not a continuous map or a future success guarantee; live facts separate.",
+          "capability": "regulated_wipe",
+          "checks": {
+            "capability": "PASS",
+            "context": "PASS",
+            "domain": "PASS",
+            "measurement": "PASS",
+            "mode": "PASS"
+          },
+          "confirmation_required": true,
+          "context": "supported_original_wall_point_pilot",
+          "domain": "simulation",
+          "evidence_ids": [
+            "G1-10",
+            "G1-12",
+            "G1-15",
+            "G1-19"
+          ],
+          "evidence_level": "simulation",
+          "evidence_sha256": "7d50dc2f8b0c92adbdb9bf2adbd3d2714990d777c9e7c876393dd8be8d652582",
+          "force_setpoint_n": 7.0,
+          "id": "G1_B_7N",
+          "metrics": [
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "RMSE",
+              "unit": "N",
+              "value": 0.048097225595427354,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "maximum_absolute",
+              "unit": "N",
+              "value": 0.22620939123324568,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "normal_force",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "mean",
+              "unit": "N",
+              "value": 7.005952743600581,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "in_plane_target_error",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "declared_target_marker",
+              "statistic": "single_selection",
+              "unit": "mm",
+              "value": 1.0962853346056713,
+              "window": "selection_stage_detector_frame"
+            },
+            {
+              "quantity": "moving_service",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "task_rule_right_active_idle_left_maintained",
+              "statistic": "fraction_of_samples",
+              "unit": "percent",
+              "value": 99.125,
+              "window": "declared_4s_scored_window_800_samples"
+            },
+            {
+              "quantity": "qualified_travel",
+              "scope": "one_recorded_run_not_a_future_guarantee",
+              "side": "right_active_pad",
+              "statistic": "path_length",
+              "unit": "mm",
+              "value": 71.51866766272262,
+              "window": "declared_4s_scored_window_800_samples"
+            }
+          ],
+          "mode": "virtual_confirmation_then_bounded_wipe",
+          "platform": "G1",
+          "qualifiers": [
+            "record status: SIMULATED",
+            "simulation only; supported (fixed) root; 17 studied upper-body coordinates",
+            "scripted virtual hand (POINT then OKAY) and a simulated camera; no gesture recognition",
+            "single deterministic observation; no repeated trials; no claim between tested locations",
+            "final hold passes under the own-state hold latch introduced after an earlier point pilot",
+            "same-host replays matched the worker reports; strict replays on a second machine refused",
+            "idle-pad 7 N: force_target_n_per_pad 7.0 in the run's released point_spec.py (pinned); not stated in G1-10, which covers the active pad",
+            "run 2 (spatial release)",
+            "final right-wrist-pitch range 1.1920928955e-5 rad, above the earlier 1e-5 rad diagnostic screen; ordinary hold rule passes"
+          ],
+          "settings": {
+            "active_pad": "right",
+            "final_hold": "own_state_latches",
+            "idle_pad_force_n": 7.0,
+            "path": "site_specific_released_point_path",
+            "timestep_s": 0.005
+          },
+          "source_pins": {
+            "journal_revision_r19_20260926/analysis/results/DECISION_TRACE.json": "acc2158e2cc222ddd69e114c5fa8579e068adae36b95697a3816bc0d882ca165",
+            "journal_revision_r19_20260926/research/CAPABILITY_RECORDS.json": "260609e4d0de5c944d5f4265455be0b042be33655b35d7c9bee6dae7839c2793",
+            "point_spatial_pilot_r1_release_20260925/point_spatial_pilot_r1/point_spec.py": "2ccf1cb1ecf767d900838b9566c08b01f4ad4887bae86ea098b6ee56c602f79a",
+            "point_spatial_pilot_r1_results_review_20260925/RESULTS_SUMMARY.json": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa"
+          },
+          "target": "B"
+        },
+        "decision": "CONFIRM",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "confirm this exact task/configuration and current snapshot"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_B_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "post_hoc_B_max_le_0p3N",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "B"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_post_hoc_B_max_le_0p3N",
+        "metrics": [
+          {
+            "bound": 0.3,
+            "comparison": "magnitude_at_most",
+            "quantity": "normal_force_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "maximum_absolute",
+            "unit": "N",
+            "window": "declared_4s_scored_window_800_samples"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "threshold chosen after outcomes were known"
+    },
+    {
+      "first": {
+        "binding": "043c589aba17ba6959407181a58f34b0cc8a61a83b4b35ef4b2402fbc57e9b17",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "missing or ambiguous metric:1142f354acf4"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ],
+          "G1_D_7N": [
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "required evidence/live facts missing or conflicting"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_A_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "post_hoc_A_max_le_0p3N",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_post_hoc_A_max_le_0p3N",
+        "metrics": [
+          {
+            "bound": 0.3,
+            "comparison": "magnitude_at_most",
+            "quantity": "normal_force_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "maximum_absolute",
+            "unit": "N",
+            "window": "declared_4s_scored_window_800_samples"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "threshold chosen after outcomes were known"
+    },
+    {
+      "first": {
+        "binding": "0bc198df70e89beb4ce89b5d8afc407bd4e02a93e6e0c0ba4a67c1055eea43ce",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "missing or ambiguous metric:1142f354acf4"
+            ]
+          },
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_7N": {
+            "failed": [
+              "recorded metric outside requested bound:1142f354acf4"
+            ],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "ASK",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {},
+        "preference_trace": [],
+        "reasons": [
+          "several supported options; explicit preference/choice needed"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_B_7N",
+          "G1_C_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "post_hoc_A_to_D_max_le_0p3N",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_post_hoc_A_to_D_max_le_0p3N",
+        "metrics": [
+          {
+            "bound": 0.3,
+            "comparison": "magnitude_at_most",
+            "quantity": "normal_force_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "maximum_absolute",
+            "unit": "N",
+            "window": "declared_4s_scored_window_800_samples"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "threshold chosen after outcomes were known"
+    },
+    {
+      "first": {
+        "binding": "66dfa4b06704f3b34b234a1e0fb7e0526fece3e628df47ed18262b7d4d72087b",
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "missing or ambiguous metric:25610868394d"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "required evidence/live facts missing or conflicting"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_D_7N"
+        ]
+      },
+      "live_semantics": "Synthetic PASS for software check ONLY",
+      "name": "post_hoc_D_whole_job_rmse",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_post_hoc_D_whole_job_rmse",
+        "metrics": [
+          {
+            "bound": 0.1,
+            "comparison": "value_at_most",
+            "quantity": "normal_force_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "RMSE",
+            "unit": "N",
+            "window": "whole_48s_job"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "threshold chosen after outcomes were known; window not recorded"
+    },
+    {
+      "first": {
+        "binding": "76381fed9bf08623c4e5ff6e2ccbcf6c554ff222c7d75b220e382534f6aeedc5",
+        "candidate_reasons": {
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": [
+              "live:contact_authorized",
+              "live:path",
+              "live:platform_safety",
+              "live:safety",
+              "live:valid_input",
+              "live:visible_target",
+              "platform availability unknown"
+            ]
+          }
+        },
+        "configuration": null,
+        "decision": "WITHHOLD",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {
+          "G1_A_7N": [
+            "target"
+          ],
+          "G1_B_7N": [
+            "target"
+          ],
+          "G1_C_7N": [
+            "target"
+          ]
+        },
+        "preference_trace": [],
+        "reasons": [
+          "shared safety unresolved"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live_semantics": "Unobserved now",
+      "name": "post_hoc_D_rmse_live_unobserved",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_post_hoc_D_rmse_live_unobserved",
+        "metrics": [
+          {
+            "bound": 0.1,
+            "comparison": "value_at_most",
+            "quantity": "normal_force_error",
+            "scope": "one_recorded_run_not_a_future_guarantee",
+            "side": "right_active_pad",
+            "statistic": "RMSE",
+            "unit": "N",
+            "window": "declared_4s_scored_window_800_samples"
+          }
+        ],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      },
+      "threshold_basis": "threshold chosen after outcomes were known"
+    },
+    {
+      "first": {
+        "binding": "32dafc8a10eea5029cc44399e8c64fd01de15d2bb8665e2be9f1f65823c240df",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_7N": {
+            "failed": [
+              "live:safety"
+            ],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "ASK",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {},
+        "preference_trace": [],
+        "reasons": [
+          "several supported options; explicit preference/choice needed"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_A_7N",
+          "G1_C_7N",
+          "G1_D_7N"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "FAIL"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "local_hazard_at_B",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_A_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "8c31708d9ef4a822728ad9148999f6872fd19576e8e95d95bbd92fbec8036cd7",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": true,
+            "unresolved": []
+          },
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": true,
+            "unresolved": []
+          },
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": true,
+            "unresolved": []
+          },
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": true,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "WAIT",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {},
+        "preference_trace": [],
+        "reasons": [
+          "supported configurations are on a busy platform"
+        ],
+        "release_authority": false,
+        "remaining": [
+          "G1_A_7N",
+          "G1_B_7N",
+          "G1_C_7N",
+          "G1_D_7N"
+        ]
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "BUSY",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "PASS",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "G1_platform_busy",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_A_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    },
+    {
+      "first": {
+        "binding": "9bda2aacff9947098195593a69f4f8db1ede47e7733c34041200f6fd42b9d413",
+        "candidate_reasons": {
+          "G1_A_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_B_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_C_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          },
+          "G1_D_7N": {
+            "failed": [],
+            "platform_busy": false,
+            "unresolved": []
+          }
+        },
+        "configuration": null,
+        "decision": "REFUSE",
+        "dispatch_implemented": false,
+        "facts_verified_by_code": false,
+        "not_applicable": {},
+        "preference_trace": [],
+        "reasons": [
+          "shared work-area hazard"
+        ],
+        "release_authority": false,
+        "remaining": []
+      },
+      "live": {
+        "candidates": {
+          "G1_A_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_B_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_C_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          },
+          "G1_D_7N": {
+            "checks": {
+              "contact_authorized": "PASS",
+              "path": "PASS",
+              "valid_input": "PASS",
+              "visible_target": "PASS"
+            },
+            "safety": "PASS"
+          }
+        },
+        "platforms": {
+          "G1": {
+            "availability": "AVAILABLE",
+            "safety": "PASS"
+          }
+        },
+        "shared_safety": "FAIL",
+        "snapshot_id": "AUTHORED_OFFLINE_PASS"
+      },
+      "live_semantics": "Synthetic live assumptions for software check ONLY",
+      "name": "shared_hazard",
+      "request": {
+        "accepted_evidence_levels": [
+          "simulation"
+        ],
+        "allowed_modes": [
+          "virtual_confirmation_then_bounded_wipe"
+        ],
+        "allowed_targets": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "candidate_priority": [],
+        "candidate_priority_basis": "",
+        "capability": "regulated_wipe",
+        "context": "supported_original_wall_point_pilot",
+        "domain": "simulation",
+        "force": {
+          "basis": "Example owner-prescribed setpoint, not a dirt-removal requirement",
+          "maximum_n": 7.0,
+          "minimum_n": 7.0
+        },
+        "id": "example_G1_A_7N",
+        "metrics": [],
+        "mode_priority": [],
+        "mode_priority_basis": "",
+        "required_settings": {
+          "active_pad": "right",
+          "final_hold": "own_state_latches",
+          "idle_pad_force_n": 7.0,
+          "path": "site_specific_released_point_path",
+          "timestep_s": 0.005
+        }
+      }
+    }
+  ],
+  "scope": "Authored software examples, NOT held-out decisions, empirical accuracy or robot trials.",
+  "source_records_known_before_design": true
+}
