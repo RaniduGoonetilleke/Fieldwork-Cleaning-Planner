@@ -1,0 +1,352 @@
+{
+  "method": "Static vendor visual-mesh conversion. No dynamics, task replay or capability inference.",
+  "results": [
+    {
+      "file": "public/models/ur3.glb",
+      "sha256": "8039b3f5272c124b5587acb8dabb108eb8e68e57c97e109b923480daff4a17aa",
+      "bytes": 2862300,
+      "triangles": 68060,
+      "primitives": 31,
+      "bounds": [
+        [
+          -0.06401193141937256,
+          -0.000712834997102624,
+          -0.17705007881909818
+        ],
+        [
+          0.3777308540456791,
+          0.4218451395246,
+          0.09949176758527756
+        ]
+      ],
+      "display_joint_angles_radians": {
+        "shoulder_pan_joint": 0,
+        "shoulder_lift_joint": -1.25,
+        "elbow_joint": 1.8,
+        "wrist_1_joint": -2.05,
+        "wrist_2_joint": -1.57,
+        "wrist_3_joint": 0
+      }
+    },
+    {
+      "file": "public/models/ur5.glb",
+      "sha256": "6db3d9905763479d342f0f5107941c49292c3d0f17f7a182a3241c7eaeb0dcb8",
+      "bytes": 3089988,
+      "triangles": 95694,
+      "primitives": 24,
+      "bounds": [
+        [
+          -0.07336580008268356,
+          -4.492359611907152e-18,
+          -0.20436094223343448
+        ],
+        [
+          0.6027014502092845,
+          0.5519688534074375,
+          0.10999999940395355
+        ]
+      ],
+      "display_joint_angles_radians": {
+        "shoulder_pan_joint": 0,
+        "shoulder_lift_joint": -1.25,
+        "elbow_joint": 1.8,
+        "wrist_1_joint": -2.05,
+        "wrist_2_joint": -1.57,
+        "wrist_3_joint": 0
+      }
+    },
+    {
+      "file": "public/models/g1.glb",
+      "sha256": "9d354af5264a4408a0a074b571fa5404f4bbe90d71a1129ff9cc994cd635913d",
+      "bytes": 9212660,
+      "triangles": 382618,
+      "primitives": 36,
+      "bounds": [
+        [
+          -0.07257411628961563,
+          -0.7922728974794127,
+          -0.2169898263469156
+        ],
+        [
+          0.36408323272197674,
+          0.5305725932121277,
+          0.21698024688427467
+        ]
+      ],
+      "display_joint_angles_radians": {
+        "left_shoulder_roll_joint": 0.16,
+        "right_shoulder_roll_joint": -0.16,
+        "left_elbow_joint": 0.22,
+        "right_elbow_joint": 0.22
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "conversion-inputs/ur/ur3.urdf",
+      "bytes": 26051,
+      "sha256": "f21ef82ec1fdf700d485f12426b3d10533df22f28ea4b134205fdb4676f33f29"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur3/visual/base.dae",
+      "bytes": 598434,
+      "sha256": "cebc07433aa6be5d38efa7fd7f8bef5b886add457631caa194fa3d4de7b8d764"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur3/visual/shoulder.dae",
+      "bytes": 1712297,
+      "sha256": "53bfe7808ad7bfe7260818022fdf18bf2c3640fa9cc7cb3b571d527ef0d53e5a"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur3/visual/upperarm.dae",
+      "bytes": 2184150,
+      "sha256": "6b8c8a4d68ce0a964abd7c3f493728b3d0d10921ee378c857bcf15b8dd2f9869"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur3/visual/forearm.dae",
+      "bytes": 918583,
+      "sha256": "c059ae9d135dff9c2b6319d6d07c44f4470b84d61398a85a15262c9cde893393"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur3/visual/wrist1.dae",
+      "bytes": 727689,
+      "sha256": "0a9302c733b031d7b33aa3c0a8ea0d8c3180bc98c819fb6e7f0e0803a851d9c5"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur3/visual/wrist2.dae",
+      "bytes": 734537,
+      "sha256": "ff6a157c9dc6174082b7a595bbf8024051ceace6c34911b405b48ebf76b4523e"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur3/visual/wrist3.dae",
+      "bytes": 43876,
+      "sha256": "24f68bc002b640779d3632716e07867288f08c01cbd5f3351ce67b94290e44ce"
+    },
+    {
+      "path": "conversion-inputs/ur/ur5.urdf",
+      "bytes": 26138,
+      "sha256": "0ed2923e1957278d4e7be7148bcb558385eb92d9f937c573514aa0f2f75ddc49"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur5/visual/base.dae",
+      "bytes": 157910,
+      "sha256": "366e6cb99a2bf5027dae92d2bd428d27224b0a5af96ca9f1e68f5b92860c2011"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur5/visual/shoulder.dae",
+      "bytes": 1007765,
+      "sha256": "fd15be6d2edbc6403e00f4f6e00bd3970491d3d53cc77eeb55c98bcd8f6b49ca"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur5/visual/upperarm.dae",
+      "bytes": 2004987,
+      "sha256": "06b46dce3dadb55a71dc55dc710a3a6206006a902e507f05267dde6ffe4c9c8c"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur5/visual/forearm.dae",
+      "bytes": 1469403,
+      "sha256": "2fabc6738b33365b5c54b59304f128907c5e214d25d5e4cc40487b67718a3dbe"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur5/visual/wrist1.dae",
+      "bytes": 948689,
+      "sha256": "3eb98c0a440ea8f4e91fd2cbb3bf39bd8b96acbb5ebdb697e64603395f1d0a79"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur5/visual/wrist2.dae",
+      "bytes": 947502,
+      "sha256": "2a60ae57fd85ee06e77482029b10fe09fd53dc68169138380e64d98d5f134f09"
+    },
+    {
+      "path": "ros-humble/ur_description/meshes/ur5/visual/wrist3.dae",
+      "bytes": 123930,
+      "sha256": "23430d8b8ec0c94c5a69fe5e70931399d3d8e07d40f277334fe62d82b959cef5"
+    },
+    {
+      "path": "conversion-inputs/g1/model.urdf",
+      "bytes": 35180,
+      "sha256": "e1dc89366bf96aa33ba4ef211884f6d81320ddd2ac6f8b1ad82986e64008be31"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/pelvis.STL",
+      "bytes": 1060884,
+      "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/pelvis_contour_link.STL",
+      "bytes": 1805184,
+      "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_hip_pitch_link.STL",
+      "bytes": 181684,
+      "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_hip_roll_link.STL",
+      "bytes": 192184,
+      "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_hip_yaw_link.STL",
+      "bytes": 296284,
+      "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_knee_link.STL",
+      "bytes": 854884,
+      "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_ankle_pitch_link.STL",
+      "bytes": 71184,
+      "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_ankle_roll_link.STL",
+      "bytes": 653384,
+      "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_hip_pitch_link.STL",
+      "bytes": 181284,
+      "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_hip_roll_link.STL",
+      "bytes": 192684,
+      "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_hip_yaw_link.STL",
+      "bytes": 296284,
+      "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_knee_link.STL",
+      "bytes": 852284,
+      "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_ankle_pitch_link.STL",
+      "bytes": 71184,
+      "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_ankle_roll_link.STL",
+      "bytes": 653784,
+      "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/waist_yaw_link.STL",
+      "bytes": 336284,
+      "sha256": "2883f20e03f09b669b5b4ce10677ee6b5191c0934b584d7cbaef2d0662856ffb"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/waist_roll_link.STL",
+      "bytes": 24184,
+      "sha256": "34f0aa73f41131230be4d25876c944fdf6c24d62553f199ff8b980c15e8913df"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/torso_link.STL",
+      "bytes": 2232984,
+      "sha256": "e96d023f0368a4e3450b86ca5d4f10227d8141156a373e7da8cb3c93266523e0"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/logo_link.STL",
+      "bytes": 243384,
+      "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/head_link.STL",
+      "bytes": 932784,
+      "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/waist_support_link.STL",
+      "bytes": 150484,
+      "sha256": "1fae9e1bb609848a1667d32eed8d6083ae443538a306843056a2a660f1b2926a"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_shoulder_pitch_link.STL",
+      "bytes": 176784,
+      "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_shoulder_roll_link.STL",
+      "bytes": 400284,
+      "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_shoulder_yaw_link.STL",
+      "bytes": 249184,
+      "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_elbow_link.STL",
+      "bytes": 88784,
+      "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_wrist_roll_link.STL",
+      "bytes": 356184,
+      "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_wrist_pitch_link.STL",
+      "bytes": 85984,
+      "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_wrist_yaw_link.STL",
+      "bytes": 318684,
+      "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/left_rubber_hand.STL",
+      "bytes": 2287484,
+      "sha256": "cff2221a690fa69303f61fce68f2d155c1517b52efb6ca9262dd56e0bc6e70fe"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_shoulder_pitch_link.STL",
+      "bytes": 176784,
+      "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_shoulder_roll_link.STL",
+      "bytes": 401884,
+      "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_shoulder_yaw_link.STL",
+      "bytes": 249984,
+      "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_elbow_link.STL",
+      "bytes": 88784,
+      "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_wrist_roll_link.STL",
+      "bytes": 356084,
+      "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_wrist_pitch_link.STL",
+      "bytes": 79584,
+      "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_wrist_yaw_link.STL",
+      "bytes": 341484,
+      "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "path": "conversion-inputs/g1/meshes/right_rubber_hand.STL",
+      "bytes": 2192684,
+      "sha256": "99533b778bca6246144fa511bb9d4e555e075c641f2a0251e04372869cd99d67"
+    }
+  ],
+  "input_path_note": "Conversion source identifiers, not runnable paths in this download. Original locations are retained in the private preparation record; source licences, URLs and hashes accompany the models."
+}

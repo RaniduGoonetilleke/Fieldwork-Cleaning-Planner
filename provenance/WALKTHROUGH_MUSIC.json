@@ -1,0 +1,14 @@
+{
+  "track": "Blue Skies",
+  "artist": "HoliznaCC0",
+  "album": "Lazy Summer Lofi",
+  "primary_track_page": "https://freemusicarchive.org/music/holiznacc0/lazy-summer-lofi-1/blue-skiesmp3/",
+  "track_license": "CC0 1.0 Universal",
+  "attribution_required": false,
+  "source_sha256": "8f1612e47e210d5bb06d0b25285596bcd99733835f691031e4aa40982060ca55",
+  "used_in": "public/assets/planning-walkthrough.mp4",
+  "source_record": "Downloaded track and saved creator statement checked locally; FMA indexed track page reconfirmed on 2026-11-13.",
+  "gain_db": -24,
+  "narration": false,
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+}

@@ -1,0 +1,107 @@
+{
+  "sourceDirectory": "Isolated restored research package, 4 November 2026; see SOURCE_MANIFEST.json.",
+  "sourceCatalogue": "catalogue_r4/CANDIDATE_MAPPING_R4.json",
+  "sourceCatalogueSha256": "e6fd8558890ed48625f0e1166ee3613949c9d8fa0bb0377f1c8993e93529e1b0",
+  "sources": [
+    {
+      "path": "data/A_reduced.npz",
+      "sha256": "d6ec9f5a503c9f6e8fbea3fc402c9cce22b507b15b85d3dd9a5161c04a799a0c",
+      "bytes": 4992829,
+      "profile": "G1_A_7N",
+      "sampleCount": 800,
+      "meanN": 7.001171039743358,
+      "rmseN": 0.048504536543857515,
+      "catalogueToleranceN": 5e-07,
+      "verifiedAgainstCatalogue": true
+    },
+    {
+      "path": "catalogue_r3/data/A_8N_reduced.npz",
+      "sha256": "7e0607873819f28d70766c05a2252ae47228b217acf7bb8608deeec12d1c91ff",
+      "bytes": 4982657,
+      "profile": "G1_A_8N",
+      "sampleCount": 800,
+      "meanN": 8.00103008393198,
+      "rmseN": 0.05479307667766278,
+      "catalogueToleranceN": 1e-12,
+      "verifiedAgainstCatalogue": true
+    },
+    {
+      "path": "data/B_reduced.npz",
+      "sha256": "6737568384dad71c94107309753d5763845ba72995fc610881465f3dda96c336",
+      "bytes": 4990218,
+      "profile": "G1_B_7N",
+      "sampleCount": 800,
+      "meanN": 7.005952743600581,
+      "rmseN": 0.04809722559542734,
+      "catalogueToleranceN": 1e-12,
+      "verifiedAgainstCatalogue": true
+    },
+    {
+      "path": "catalogue_r3/data/B_8N_reduced.npz",
+      "sha256": "5efe40482c7de0a0a44170cb447a6ffea447fc66c623559c64a82295f145c95b",
+      "bytes": 4977418,
+      "profile": "G1_B_8N",
+      "sampleCount": 800,
+      "meanN": 8.006605302706596,
+      "rmseN": 0.05448105891526277,
+      "catalogueToleranceN": 1e-12,
+      "verifiedAgainstCatalogue": true
+    },
+    {
+      "path": "data/C_reduced.npz",
+      "sha256": "f2716f7a5bf82466fe9fbcfb186041c78a4b39bb3c24f09a13d9031ef161bf2e",
+      "bytes": 5004544,
+      "profile": "G1_C_7N",
+      "sampleCount": 800,
+      "meanN": 7.001219009601487,
+      "rmseN": 0.05180726394773963,
+      "catalogueToleranceN": 1e-12,
+      "verifiedAgainstCatalogue": true
+    },
+    {
+      "path": "catalogue_r3/data/C_8N_reduced.npz",
+      "sha256": "44531f4d6dde4374ebbb47c359fd4dd283d1f78e7eb78f0b019fed99be063c24",
+      "bytes": 4987182,
+      "profile": "G1_C_8N",
+      "sampleCount": 800,
+      "meanN": 8.00090525764998,
+      "rmseN": 0.05491983449071389,
+      "catalogueToleranceN": 1e-12,
+      "verifiedAgainstCatalogue": true
+    },
+    {
+      "path": "data/D_reduced.npz",
+      "sha256": "940f91aaf20f64a04cfad07e83fa41000c20980fcfd163c938d927a56ce37f51",
+      "bytes": 4966450,
+      "profile": "G1_D_7N",
+      "sampleCount": 800,
+      "meanN": 7.004439106798884,
+      "rmseN": 0.04794851230404908,
+      "catalogueToleranceN": 1e-12,
+      "verifiedAgainstCatalogue": true
+    },
+    {
+      "path": "catalogue_r3/data/D_8N_reduced.npz",
+      "sha256": "b532f0556bfeb02b793137698f607a2e08cb3bcf9cf4066d6a9e9ac01711fca9",
+      "bytes": 4951115,
+      "profile": "G1_D_8N",
+      "sampleCount": 800,
+      "meanN": 8.004308058340849,
+      "rmseN": 0.04859991968131821,
+      "catalogueToleranceN": 1e-12,
+      "verifiedAgainstCatalogue": true
+    }
+  ],
+  "originalMethodFiles": {
+    "scripts/reproduce_metrics.py": "4b53c1bb1f22e9aef86d3464b93a13f335977bca0d65eadd267af0c73d92edbf",
+    "catalogue_r3/reproduce_8N_metrics.py": "a9d83194858ed4c8b94a69d7764ac62821d8b55d522c91be94c8913ac25c9c31"
+  },
+  "sampling": "All 800 recorded samples per window; no downsampling or generated waveform.",
+  "allMetricChecksPassed": true,
+  "output": "public/assets/force-traces.json",
+  "outputSha256": "8a303f78f6c3c81a6ddd4be0c89e09fdd7f4042ff58582f7ce0b98ed62eba3d7",
+  "outputBytes": 284130,
+  "generatorSha256": "b42850f3303905eba2c642f872cb79723574e9dacd7156e8dbdc50c51f42f63a",
+  "seriesCount": 8,
+  "totalSamples": 6400
+}

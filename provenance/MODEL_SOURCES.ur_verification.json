@@ -1,0 +1,86 @@
+[
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur3/visual/forearm.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual/forearm.dae",
+    "sha256": "c059ae9d135dff9c2b6319d6d07c44f4470b84d61398a85a15262c9cde893393",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur3/visual/wrist1.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual/wrist1.dae",
+    "sha256": "0a9302c733b031d7b33aa3c0a8ea0d8c3180bc98c819fb6e7f0e0803a851d9c5",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur3/visual/shoulder.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual/shoulder.dae",
+    "sha256": "53bfe7808ad7bfe7260818022fdf18bf2c3640fa9cc7cb3b571d527ef0d53e5a",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur3/visual/wrist3.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual/wrist3.dae",
+    "sha256": "24f68bc002b640779d3632716e07867288f08c01cbd5f3351ce67b94290e44ce",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur3/visual/base.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual/base.dae",
+    "sha256": "cebc07433aa6be5d38efa7fd7f8bef5b886add457631caa194fa3d4de7b8d764",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur3/visual/wrist2.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual/wrist2.dae",
+    "sha256": "ff6a157c9dc6174082b7a595bbf8024051ceace6c34911b405b48ebf76b4523e",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur3/visual/upperarm.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual/upperarm.dae",
+    "sha256": "6b8c8a4d68ce0a964abd7c3f493728b3d0d10921ee378c857bcf15b8dd2f9869",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur5/visual/forearm.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual/forearm.dae",
+    "sha256": "2fabc6738b33365b5c54b59304f128907c5e214d25d5e4cc40487b67718a3dbe",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur5/visual/wrist1.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual/wrist1.dae",
+    "sha256": "3eb98c0a440ea8f4e91fd2cbb3bf39bd8b96acbb5ebdb697e64603395f1d0a79",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur5/visual/shoulder.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual/shoulder.dae",
+    "sha256": "fd15be6d2edbc6403e00f4f6e00bd3970491d3d53cc77eeb55c98bcd8f6b49ca",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur5/visual/wrist3.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual/wrist3.dae",
+    "sha256": "23430d8b8ec0c94c5a69fe5e70931399d3d8e07d40f277334fe62d82b959cef5",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur5/visual/base.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual/base.dae",
+    "sha256": "366e6cb99a2bf5027dae92d2bd428d27224b0a5af96ca9f1e68f5b92860c2011",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur5/visual/wrist2.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual/wrist2.dae",
+    "sha256": "2a60ae57fd85ee06e77482029b10fe09fd53dc68169138380e64d98d5f134f09",
+    "matches_installed": true
+  },
+  {
+    "file": "/opt/ros/humble/share/ur_description/meshes/ur5/visual/upperarm.dae",
+    "url": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual/upperarm.dae",
+    "sha256": "06b46dce3dadb55a71dc55dc710a3a6206006a902e507f05267dde6ffe4c9c8c",
+    "matches_installed": true
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "scope": "Imported display models only. No model geometry, pose, skin or animation contributes a capability, measurement, safety judgement or live availability fact.",
+  "robot_models": [
+    {
+      "id": "UR3",
+      "file": "public/models/ur3.glb",
+      "source": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/tree/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur3/visual",
+      "license": "BSD-3-Clause",
+      "copyright": "Universal Robots ROS2 Description contributors",
+      "changes": "Seven original visual meshes assembled using the installed URDF; static display joint pose; coordinate conversion and GLB export. Visual mesh bytes match the fixed official source. No controller code included."
+    },
+    {
+      "id": "UR5",
+      "file": "public/models/ur5.glb",
+      "source": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/tree/78c5afd8bfee78a459c0265304340a85f1d44792/meshes/ur5/visual",
+      "license": "BSD-3-Clause",
+      "copyright": "Universal Robots ROS2 Description contributors",
+      "changes": "Seven original visual meshes assembled using the installed URDF; static display joint pose; coordinate conversion and GLB export. Visual mesh bytes match the fixed official source. No controller code included."
+    },
+    {
+      "id": "G1",
+      "file": "public/models/g1.glb",
+      "source": "https://github.com/unitreerobotics/unitree_ros/tree/41dec58c7a3ccb3050243ef16ac2ca74b2b0f9ca/robots/g1_description",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016-2022 HangZhou YuShu TECHNOLOGY CO.,LTD. (Unitree Robotics)",
+      "changes": "36 vendor visual meshes assembled in a static 29-DOF display pose and converted to GLB with smoothed vertex normals. A schematic pelvis stand is added in the viewer. This is not the exact five-finger Isaac asset used in the study."
+    }
+  ],
+  "human_model": {
+    "ids": [
+      "H1",
+      "H2"
+    ],
+    "file": "public/models/human/CesiumMan.glb",
+    "title": "Cesium Man",
+    "creator": "Cesium",
+    "source": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/8f492390ddc7a2ae221a1369ef560589cf8c70fb/Models/CesiumMan",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2017 Cesium",
+    "changes": "Original GLB retained. Two instances displayed with plain, recolored materials and a frozen animation pose, scaled for an illustrative person. They do not depict actual participants. No branded texture is shown.",
+    "trademark_notice": "The asset contains a Cesium logo texture; that texture is not displayed. The included trademark notice is preserved. No endorsement is implied."
+  },
+  "loaded_model_bytes": 15602992,
+  "files": [
+    {
+      "file": "public/models/CREDITS.md",
+      "bytes": 2163,
+      "sha256": "ace41db045b6b87fa4796af4680af9592ba03c8ab74c66de8d8ed015113614cd"
+    },
+    {
+      "file": "public/models/credits.json",
+      "bytes": 1422,
+      "sha256": "df2ff50ff3c7062e0b0f9e40bf08efeede8a9b11000a90004eb1a13fe76984b2"
+    },
+    {
+      "file": "public/models/g1/LICENSE",
+      "bytes": 1558,
+      "sha256": "84aac59fd3246e3ddc49d1387644e8fcf43b0def4f0b9fe687f372e90446df2d"
+    },
+    {
+      "file": "public/models/g1.glb",
+      "bytes": 9212660,
+      "sha256": "9d354af5264a4408a0a074b571fa5404f4bbe90d71a1129ff9cc994cd635913d"
+    },
+    {
+      "file": "public/models/human/CesiumMan.glb",
+      "bytes": 438044,
+      "sha256": "b7001eaeea8254bd44773bcd247e78696d94169388fbb2a1800fc69434e777d9"
+    },
+    {
+      "file": "public/models/human/LICENSE.md",
+      "bytes": 858,
+      "sha256": "709e02749c7c904c480d98f883cae63046f589031b5f22249544b13c159eedf6"
+    },
+    {
+      "file": "public/models/human/README.source.md",
+      "bytes": 1146,
+      "sha256": "1bf7fa794013d2e0de8c244518936b04d95cba780f4510c8cceee4c23dbc04a8"
+    },
+    {
+      "file": "public/models/human/TRADEMARK.txt",
+      "bytes": 625,
+      "sha256": "7bafc8dbff0b9d04297bced53a47809e3ab6721cb35b4a2d780533476b28ebd4"
+    },
+    {
+      "file": "public/models/ur/LICENSE",
+      "bytes": 1459,
+      "sha256": "143077f9f6a8de5a99f78c2c2472801fb53cf240277ef661642f079b9acdfff8"
+    },
+    {
+      "file": "public/models/ur/README.source.md",
+      "bytes": 7230,
+      "sha256": "4bca5d71536dc0ccbd42c7718a8d79ba49dd7ddcd8b5ca0f4c5c63b9cfb1ac2f"
+    },
+    {
+      "file": "public/models/ur3.glb",
+      "bytes": 2862300,
+      "sha256": "8039b3f5272c124b5587acb8dabb108eb8e68e57c97e109b923480daff4a17aa"
+    },
+    {
+      "file": "public/models/ur5.glb",
+      "bytes": 3089988,
+      "sha256": "6db3d9905763479d342f0f5107941c49292c3d0f17f7a182a3241c7eaeb0dcb8"
+    }
+  ],
+  "gallery_scale": "Display heights are normalized for legibility. Relative model sizes are not to scale, and display scaling has no effect on planning inputs or recorded measurements."
+}

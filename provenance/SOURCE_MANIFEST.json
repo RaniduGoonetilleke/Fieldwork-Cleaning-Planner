@@ -1,0 +1,123 @@
+{
+  "source": "Corrected local source package prepared on 6 November 2026 and checked for this app on 10 November 2026; exact-byte copies identified below. This does not verify the current state of a public repository.",
+  "source_public_commit": "e81fd955b62d327f0c387b46be56bf61df6b90fd",
+  "status": "Exact copies from the corrected source package. Portable historical source labels and their dependent identities are consistent. Decision algorithms, scientific values and decisions are unchanged.",
+  "files": [
+    {
+      "path": "vendor/LICENSE",
+      "source_path": "LICENSE",
+      "sha256": "9c427c309c62e7722b0b39a8149d083969ccc33869f1d8f43c1b4ad2434d4f2f",
+      "bytes": 1096
+    },
+    {
+      "path": "vendor/selector/selector.py",
+      "source_path": "selector/selector.py",
+      "sha256": "922cb93fa1265a8cc50987812d3c062345b99aa2b676536173a68f21eef22d1e",
+      "bytes": 17719
+    },
+    {
+      "path": "vendor/selector/build_examples.py",
+      "source_path": "selector/build_examples.py",
+      "sha256": "200718e3824a17e7698c39b0dd4c0128a014dec73ec19c3da394fd6e190ddd28",
+      "bytes": 8732
+    },
+    {
+      "path": "vendor/selector/test_selector.py",
+      "source_path": "selector/test_selector.py",
+      "sha256": "a3409efb94c1495adf996167fa30936e4f63fca4cb567b97e0ac66cc373f220a",
+      "bytes": 45331
+    },
+    {
+      "path": "vendor/analysis/CANDIDATE_MAPPING.json",
+      "source_path": "analysis/CANDIDATE_MAPPING.json",
+      "sha256": "4145b7e4b097f7ee6c5c873a5f6103cf7ac371e4bd0ae7b536df58ec9844c730",
+      "bytes": 22412
+    },
+    {
+      "path": "vendor/analysis/DEVELOPMENT_EXAMPLES.json",
+      "source_path": "analysis/DEVELOPMENT_EXAMPLES.json",
+      "sha256": "25bc35064a1e3fb91e979c43f816fb41ed85457efff06114e0d0fe4a8621e958",
+      "bytes": 175173
+    },
+    {
+      "path": "vendor/catalogue_r3/CANDIDATE_MAPPING_R3.json",
+      "source_path": "catalogue_r3/CANDIDATE_MAPPING_R3.json",
+      "sha256": "ac1042ce4053151c1f7d2faf8eeab087133eb527298707c0db57d6d0fd304c69",
+      "bytes": 44611
+    },
+    {
+      "path": "vendor/catalogue_r4/CANDIDATE_MAPPING_R4.json",
+      "source_path": "catalogue_r4/CANDIDATE_MAPPING_R4.json",
+      "sha256": "c7bc810f12e4f48b308f9ca564c36447b2b02054f6c737827c0f558d120df305",
+      "bytes": 47347
+    },
+    {
+      "path": "vendor/catalogue_r4/DECISIONS_R4.json",
+      "source_path": "catalogue_r4/DECISIONS_R4.json",
+      "sha256": "924ffd4d56189208379dd8f74ae3c2e3e4cedc8f044315989c74c755f0344a6e",
+      "bytes": 2065
+    },
+    {
+      "path": "vendor/catalogue_r4/test_catalogue_r4.py",
+      "source_path": "catalogue_r4/test_catalogue_r4.py",
+      "sha256": "4147b4ed7c7f7c8411b1cbd99c3a3236cd131532037e020bda13e3f6fa770871",
+      "bytes": 9020
+    },
+    {
+      "path": "vendor/job_example/job_plan.py",
+      "source_path": "job_example/job_plan.py",
+      "sha256": "de498e9b1a18765a25a5754b67cfdcbbb29e91b72386e23153b33d99e0d17bca",
+      "bytes": 34621
+    },
+    {
+      "path": "vendor/job_example/test_job_plan.py",
+      "source_path": "job_example/test_job_plan.py",
+      "sha256": "4df50ad307ed3a0aa3a7f3448905ed6525fc0b8c07140f19ac9ddbf4efe75760",
+      "bytes": 73272
+    },
+    {
+      "path": "vendor/job_example/scenarios/tested_contexts.json",
+      "source_path": "job_example/scenarios/tested_contexts.json",
+      "sha256": "d88d1ccf8f74c8e74e64b76315c39b5ab8576331f89ac539d75b6a9776237e8a",
+      "bytes": 10273
+    },
+    {
+      "path": "vendor/job_example/scenarios/customer_building.json",
+      "source_path": "job_example/scenarios/customer_building.json",
+      "sha256": "7dc7de4967a9ca3ac990de2d4da870c1806f3a194ac601e9bcd6cfbf28c2677c",
+      "bytes": 13585
+    },
+    {
+      "path": "vendor/records/CASE_CAPABILITY_RECORDS.json",
+      "source_path": "records/CASE_CAPABILITY_RECORDS.json",
+      "sha256": "50bf05f5a3e1f2fd146002598de43d04683b2c6803d5a9d8f8b73cbca1ad6d5b",
+      "bytes": 73684
+    },
+    {
+      "path": "vendor/records/DECISION_TRACE.json",
+      "source_path": "records/DECISION_TRACE.json",
+      "sha256": "0b53c93c29add6d97fa267e5cdd9f1097cdf01a56e45797109256924911528c5",
+      "bytes": 80252
+    },
+    {
+      "path": "vendor/records/UR5_OPERATION_CONFIRMATION_R37.json",
+      "source_path": "records/UR5_OPERATION_CONFIRMATION_R37.json",
+      "sha256": "9ced2b592dcf583bc967c46800120d6b7b52f2b8844799d4936a6a2db9812e2b",
+      "bytes": 2750
+    },
+    {
+      "path": "vendor/records/UR5_OPERATION_CLARIFICATION.json",
+      "source_path": "records/UR5_OPERATION_CLARIFICATION.json",
+      "sha256": "df2764cc0b4a39bf3de417feafe4ce3a9d486beebd6b07e5bf528d07780fe3a2",
+      "bytes": 5906
+    },
+    {
+      "path": "vendor/records/SPATIAL_RESULTS_SUMMARY.json",
+      "source_path": "records/SPATIAL_RESULTS_SUMMARY.json",
+      "sha256": "5ee5f34801ce1f27eb1506db48057f930f8fa00e608ad7a7cf78d30acb6b95aa",
+      "bytes": 4399
+    }
+  ],
+  "path_note": "Source paths are relative to the corrected source package. Original source locations and the exact label/identity mapping remain in the private preparation record.",
+  "source_package_manifest_sha256": "df33bf7b4727d072217ddb03ee58347b3d9c99090f2f3b66821fdfca3fc4c893"
+}

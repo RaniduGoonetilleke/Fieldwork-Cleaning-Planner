@@ -1,0 +1,30 @@
+[
+  {
+    "file": "public/models/ur3.glb",
+    "valid_glb_container": true,
+    "buffer_bounds_valid": true,
+    "index_bounds_valid": true,
+    "meshes": 1
+  },
+  {
+    "file": "public/models/ur5.glb",
+    "valid_glb_container": true,
+    "buffer_bounds_valid": true,
+    "index_bounds_valid": true,
+    "meshes": 1
+  },
+  {
+    "file": "public/models/g1.glb",
+    "valid_glb_container": true,
+    "buffer_bounds_valid": true,
+    "index_bounds_valid": true,
+    "meshes": 1
+  },
+  {
+    "file": "public/models/human/CesiumMan.glb",
+    "valid_glb_container": true,
+    "buffer_bounds_valid": true,
+    "index_bounds_valid": true,
+    "meshes": 1
+  }
+]

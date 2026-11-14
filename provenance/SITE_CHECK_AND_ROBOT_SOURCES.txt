@@ -1,0 +1,67 @@
+SITE CHECKS AND ROBOT OPTIONS — 10 November 2026
+
+These checklists are authored prompts informed by UK guidance, not an HSE-approved form, a complete risk assessment or evidence that a workplace is safe. They record declarations for an offline plan. Manufacturer descriptions are not independent tests or proof of suitability. No vendors were contacted.
+
+SITE CHECKS
+1. HSE: Risk assessment for cleaning
+https://www.hse.gov.uk/cleaning/topics/risk-assessment.htm
+Identify hazards, decide on controls, put them in place. Grounds the work-area questions.
+2. HSE: Steps needed to manage risk
+https://www.hse.gov.uk/simple-health-safety/risk/steps-needed-to-manage-risk.htm
+Record findings and review controls when circumstances change. Grounds review details and reset-on-change behavior.
+3. HSE: Slips and trips in cleaning
+https://www.hse.gov.uk/cleaning/topics/slips.htm
+Wet surfaces, cables, obstructions and public access need controls; signs alone do not prevent entry.
+4. HSE: Control of substances hazardous to health in cleaning
+https://www.hse.gov.uk/cleaning/topics/coshh.htm
+Assess hazardous substances and exposure; give suitable instruction and training. The app does not choose chemical concentrations or certify compatibility.
+5. HSE: Working at height whilst window cleaning
+https://www.hse.gov.uk/cleaning/topics/window-cleaning.htm
+Site-specific height, access, public location, weather, ground and equipment matter. The app records facade/specialist requests but does not assign an ordinary worker to them.
+6. HSE: Musculoskeletal disorders and managing risks in cleaning
+https://www.hse.gov.uk/cleaning/backpain.htm
+https://www.hse.gov.uk/cleaning/manage-risks.htm
+Work methods, physical demands, equipment and training matter. The app does not estimate a worker's health or fatigue.
+7. UK Civil Aviation Authority: Drones
+https://www.caa.co.uk/drones/
+UK flight and operation requirements need an operation-specific review. A US manufacturer's certification statement is not UK permission.
+
+PRODUCT SOURCES
+
+Ozmo — Skyline Robotics
+https://www.skylinerobotics.com/
+The manufacturer describes robotic exterior-window cleaning using a building maintenance platform.
+Proposed checks: Compatible building access platform and installation; Facade geometry, glazing and cleaning method; Exclusion area, trained staff and a site trial.
+
+Kite facade-cleaning robot — Kite Robotics
+https://www.kiterobotics.com/en/the-robot/
+The manufacturer describes a rotating brush moved across a facade by four cables and winches.
+Proposed checks: Building-specific anchors and cable arrangement; Brush access to frames, recesses and facade materials; Weather limits, public protection and cleaning-quality trial.
+
+Sherpa cleaning drone — Lucid Bots
+https://www.lucidbots.com/sherpa-drone
+The manufacturer describes exterior washing with ground-fed water or solution. A pilot controls the drone and a ground crew supports it.
+Proposed checks: Trained pilot, ground crew and local flight permissions; Weather, airspace, hoses and keeping the public clear; Surface/product compatibility, runoff and a test panel; spraying may not replace scrubbing.
+
+KIRA B 50 — Karcher
+https://www.karcher.com/gb/en/professional/products/cleaning-robots-c6331
+The manufacturer describes robotic scrubbing and drying for medium to large hard-floor areas.
+Proposed checks: Floor material, slope, load and water tolerance; Route clearance, steps, low obstacles and people; Staff instruction, servicing and a site cleaning trial.
+
+KIRA CV 50 — Karcher
+https://www.karcher.com/gb/en/professional/products/cleaning-robots-c6331
+The manufacturer lists robotic vacuum cleaning for medium-sized carpeted and hard-floor areas.
+Proposed checks: Dry vacuuming matches the requested cleaning outcome; Floor and route suitability, obstacles and people; Operator instruction, docking and a site cleaning trial.
+
+WINBOT W2 PRO OMNI — ECOVACS
+https://www.ecovacs.com/uk/campaign/ces-robot-window-cleaner-winbot
+This consumer-facing product page describes a portable window-cleaning robot. It does not establish suitability or permitted commercial use for this job.
+Proposed checks: Exact pane dimensions, glass type and permitted use in its manual; Safe placement/retrieval, fall protection and supervision; Cleaning outcome, commercial-use terms and a site trial.
+
+ADDITIONAL PRIMARY DETAIL
+Skyline Robotics: https://www.skylinerobotics.com/ (use of existing building maintenance units).
+Karcher KIRA B50 operating manual: https://s1.kaercher-media.com/documents/manuals/html/BTA-5939031-000-07/EN.html (site-route restrictions; consult exact device manual).
+Kite brochure: https://www.kiterobotics.com/wp-content/uploads/2025/05/Kite-Robotics-Brochure.pdf (wire-controlled brush and building-specific geometry).
+
+NOT INFERRED
+No speed, cost, safety superiority, deployment approval, autonomous drone flight, integration API, availability, procurement price or cleaning performance is established for the user's site. Sherpa is explicitly pilot-operated on its manufacturer's page. No current product match is asserted for desks, whiteboards, wall marks or bin emptying. Those jobs may need a separately designed system and evidence.

@@ -1,0 +1,145 @@
+{
+  "created_utc_date": "2026-11-06",
+  "purpose": "Illustrative clothed people for the offline planning app; not research subjects or measured robot/user representations.",
+  "creator": "Quaternius",
+  "pack": "Background Posed Humans Pack",
+  "creator_page": "https://quaternius.com/packs/backgroundposedhumans.html",
+  "creator_download_folder": "https://drive.google.com/drive/folders/18dWyZlA53euzsc1WobITqFYLcT5sFULz?usp=sharing",
+  "licence": {
+    "id": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "page_verified": "2026-11-06",
+    "creator_page_statement": "License: CC0; free to use in personal and commercial projects.",
+    "original_licence_file": "public/models/people/source/License.txt",
+    "upstream_inconsistency": "The original licence heading says Knight Pack by Quaternius, while its suggested credit says Background characters by Quaternius. The unchanged original is retained. The official Background Posed Humans pack page independently states CC0."
+  },
+  "sources": [
+    {
+      "file": "public/models/people/source/License.txt",
+      "download_url": "https://drive.google.com/uc?export=download&id=1K6M5kb7ugqrPROrSx6O6dUBJA366xq-j",
+      "bytes": 526,
+      "sha256": "d26d24393ccf99517fe161cbd304a2fc847f1a017328be94d92c7bc1d289cce3"
+    },
+    {
+      "file": "public/models/people/source/Female_Standing.mtl",
+      "download_url": "https://drive.google.com/uc?export=download&id=1NFMtKoemVwLZuq4BpdMIWXef8FTUC4Rq",
+      "bytes": 775,
+      "sha256": "dde44a8541cfcce5aa61aea7d384e4871c7faf60a081d083ec488ba7d64ee821"
+    },
+    {
+      "file": "public/models/people/source/Female_Standing.obj",
+      "download_url": "https://drive.google.com/uc?export=download&id=13oLeT8urbcq_6W2C1cQq49tqTLKuG69b",
+      "bytes": 89310,
+      "sha256": "4d3d8e6bb79abaed94f4c301c40920bce5fb445efac9a6c23223073c9012acfd"
+    },
+    {
+      "file": "public/models/people/source/Male_Standing.mtl",
+      "download_url": "https://drive.google.com/uc?export=download&id=1smW3UJYnJCVavWgy2Py4SLCH_fzYveqK",
+      "bytes": 773,
+      "sha256": "b3a8d9a736a0673061804f9baaccf13dc36abb044e7fa814a592a04c58cbcb5f"
+    },
+    {
+      "file": "public/models/people/source/Male_Standing.obj",
+      "download_url": "https://drive.google.com/uc?export=download&id=1sYxmvLuMH9CkwwLGyTAhZsN_-tFIhbHu",
+      "bytes": 72941,
+      "sha256": "ddc3f919357f5e6aa91f124821336d52c88408782c8584233f4214175bc7b1d0"
+    },
+    {
+      "file": "public/models/people/source/Female_Hairstyle_1.mtl",
+      "download_url": "https://drive.google.com/uc?export=download&id=12F1Fi7AZX3IDTPz05Z02stdChxQfnK8U",
+      "bytes": 244,
+      "sha256": "d908b378b209a5aeb66158ae7beba0fcfcff449f26e5b4209782455cb34ae3ac"
+    },
+    {
+      "file": "public/models/people/source/Female_Hairstyle_1.obj",
+      "download_url": "https://drive.google.com/uc?export=download&id=1lLF_OUcoF3aBsEIXo9UYK8NMFANB5JXh",
+      "bytes": 23580,
+      "sha256": "7cc4dc5fc09317c82e645d59dc9de02be951e184d9650373ab3a5b28da7f3b8b"
+    },
+    {
+      "file": "public/models/people/source/Male_Hairstyle_1.mtl",
+      "download_url": "https://drive.google.com/uc?export=download&id=1bxK0KIjC97sFKM5suu9UPzS9Lc4Am01Q",
+      "bytes": 242,
+      "sha256": "4e5b7fa7918856ea0e23265e61558d56735734cc3c997ce6e621ad3d3986f2d7"
+    },
+    {
+      "file": "public/models/people/source/Male_Hairstyle_1.obj",
+      "download_url": "https://drive.google.com/uc?export=download&id=1ITsZj3OhCHyIx9va025Drd6USpYn7ZUp",
+      "bytes": 11502,
+      "sha256": "e49019079467be52bbf5fbe2133aaed5bf6bf1a2fb526625a745aa782aa8c29d"
+    }
+  ],
+  "assets": [
+    {
+      "file": "public/models/people/worker-man.glb",
+      "url": "/models/people/worker-man.glb",
+      "bytes": 93792,
+      "sha256": "7340f9e3f2cf2e32e272f2206d6c47ffa22279739d6487e545b02c56792afd62",
+      "meshes": 5,
+      "triangles": 1060,
+      "bounds_size": [
+        0.558952271938324,
+        1.75,
+        0.31219932436943054
+      ],
+      "materials": [
+        "Skin",
+        "Shirt",
+        "Pants",
+        "Shoes",
+        "Hair"
+      ],
+      "pose": "Static standing",
+      "animations": 0,
+      "textures": 0,
+      "external_files": false
+    },
+    {
+      "file": "public/models/people/worker-woman.glb",
+      "url": "/models/people/worker-woman.glb",
+      "bytes": 144064,
+      "sha256": "8e7ad9acd529f53b1132e9997f22b7bd92f5ddc70767b777226aa08f4b4a7a67",
+      "meshes": 5,
+      "triangles": 1732,
+      "bounds_size": [
+        0.47056862711906433,
+        1.75,
+        0.3247075378894806
+      ],
+      "materials": [
+        "Skin",
+        "Shirt",
+        "Pants",
+        "Shoes",
+        "Hair"
+      ],
+      "pose": "Static standing",
+      "animations": 0,
+      "textures": 0,
+      "external_files": false
+    }
+  ],
+  "conversion": {
+    "tool": "Assimp command-line export to glb2; local Python OBJ assembly and GLB JSON material adjustment",
+    "executed_downloaded_code": false,
+    "steps": [
+      "Preserve original OBJ, MTL and licence bytes.",
+      "Combine each standing OBJ with hairstyle 1, updating face indices.",
+      "Translate male hair by (-0.01, 3.53, -0.036) and female hair by (-0.01, 3.44, -0.001) in original coordinates.",
+      "Centre X/Z bounds, place the lowest vertex at Y=0 and uniformly scale to height 1.75.",
+      "Export GLB with Assimp. Set material metallicFactor=0 and roughnessFactor=0.85, retaining base colour values."
+    ],
+    "up_axis": "+Y",
+    "likely_front": "-Z; confirm visually in gallery before choosing camera orientation"
+  },
+  "validation": {
+    "loader": "The app vendored Three.js GLTFLoader, Node.js 20.20.2",
+    "loaded_without_external_files": true,
+    "normals_present": true,
+    "skinned_meshes": 0,
+    "animation_clips": 0,
+    "external_buffers": 0,
+    "textures": 0,
+    "visual_review": "Creator preview inspected. The final in-app visual check was assigned separately; this record does not confirm its completion. That check includes orientation and hair placement."
+  }
+}

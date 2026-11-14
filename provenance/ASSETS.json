@@ -1,0 +1,17 @@
+{
+  "assets": [
+    {
+      "source": "figures/figure2_ur3_case.png",
+      "copy": "public/assets/ur3-case.png",
+      "sha256": "df03c30c4a0c94f1778203d641257ab30daa5725e0ad4597c64a8157418d5804"
+    },
+    {
+      "source": "figures/figure4_g1_case.png",
+      "copy": "public/assets/g1-case.png",
+      "sha256": "83781b8f2ae6bfc637e5d4f3938e8a513c3d6a5e9900d59d5359a83a8a5c26e0"
+    }
+  ],
+  "ur3_attribution": "Goonetilleke and Khalid (2026), doi:10.3389/frobt.2026.1897261, CC BY.",
+  "g1_attribution": "Existing team manuscript Figure 4, recorded simulation; not live.",
+  "sourcePackage": "Isolated restored research package, 4 November 2026; paths relative to that source package."
+}

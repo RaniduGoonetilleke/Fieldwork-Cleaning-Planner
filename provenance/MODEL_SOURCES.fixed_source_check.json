@@ -1,0 +1,26 @@
+[
+  {
+    "file": "public/models/human/CesiumMan.glb",
+    "fixed_source": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/8f492390ddc7a2ae221a1369ef560589cf8c70fb/Models/CesiumMan/glTF-Binary/CesiumMan.glb",
+    "matches": true,
+    "sha256": "b7001eaeea8254bd44773bcd247e78696d94169388fbb2a1800fc69434e777d9"
+  },
+  {
+    "file": "public/models/human/LICENSE.md",
+    "fixed_source": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/8f492390ddc7a2ae221a1369ef560589cf8c70fb/Models/CesiumMan/LICENSE.md",
+    "matches": true,
+    "sha256": "709e02749c7c904c480d98f883cae63046f589031b5f22249544b13c159eedf6"
+  },
+  {
+    "file": "public/models/ur/LICENSE",
+    "fixed_source": "https://raw.githubusercontent.com/UniversalRobots/Universal_Robots_ROS2_Description/78c5afd8bfee78a459c0265304340a85f1d44792/LICENSE",
+    "matches": true,
+    "sha256": "143077f9f6a8de5a99f78c2c2472801fb53cf240277ef661642f079b9acdfff8"
+  },
+  {
+    "file": "public/models/g1/LICENSE",
+    "fixed_source": "https://raw.githubusercontent.com/unitreerobotics/unitree_ros/41dec58c7a3ccb3050243ef16ac2ca74b2b0f9ca/LICENSE",
+    "matches": true,
+    "sha256": "84aac59fd3246e3ddc49d1387644e8fcf43b0def4f0b9fe687f372e90446df2d"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "scope": "Projection check of conservative gallery bounds at the default/reset camera. Browser visual verification remained pending when this check was recorded.",
+  "records": [
+    {
+      "width": 580,
+      "height": 335,
+      "max_absolute_ndc_x": 0.9537090278055472,
+      "max_absolute_ndc_y": 0.5284596774515891,
+      "all_gallery_bounds_in_frame": true
+    },
+    {
+      "width": 324,
+      "height": 340,
+      "max_absolute_ndc_x": 0.9328105095299137,
+      "max_absolute_ndc_y": 0.29153189941373303,
+      "all_gallery_bounds_in_frame": true
+    },
+    {
+      "width": 360,
+      "height": 460,
+      "max_absolute_ndc_x": 0.9291418569373242,
+      "max_absolute_ndc_y": 0.23954211738628148,
+      "all_gallery_bounds_in_frame": true
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "max_absolute_ndc_x": 0.9530321485070357,
+      "max_absolute_ndc_y": 0.5209652636422969,
+      "all_gallery_bounds_in_frame": true
+    }
+  ]
+}

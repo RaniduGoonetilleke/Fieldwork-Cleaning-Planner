@@ -1,0 +1,45 @@
+Cleaning-task research for the New building scenario
+Research date: 9 November 2026
+Purpose: sources behind the six customer task templates in this offline app.
+
+INDUSTRY SOURCES
+
+1. BICSc Cleaning Standards Specifications Table, hosted by Hounslow Council.
+https://democraticservices.hounslow.gov.uk/documents/s159708/Appendix%25201%2520BICSc%2520Cleaning%2520Standards%2520Specifications.pdf
+Page 5 gives an office specification covering waste, hard and soft floors, vertical surfaces, furniture/work surfaces and washrooms. Earlier pages distinguish completed-task standards from conditions between cleans. This supports broad task categories and explicit completion criteria. Do not use the example frequencies as universal requirements.
+
+2. Delia Cannings / British Cleaning Council (2025). Strategic Framework for Achieving Cleanliness and Hygiene in Public Environments.
+https://www.bics.org.uk/wp-content/uploads/2025/10/BCC-Framework-Document-2025-v3-FINAL.pdf
+Pages 8-10 discuss preparing equipment and spaces, identifying what needs cleaning, expected standards, frequency, responsibility and scheduling. These support customer-input fields and preparation tasks. This is industry guidance, not evidence that our app improves outcomes.
+
+3. UK National Careers Service. Cleaner.
+https://nationalcareers.service.gov.uk/job-profiles/cleaner
+The role includes window/glass cleaning and maintaining cleaning-product stocks, alongside setting-specific duties. This supports interior-glass and supplies task choices; it does not qualify our robots for them.
+
+PRIMARY RESEARCH
+
+4. Bormann, R., Hampp, J. and Hagele, M. (2015). New Brooms Sweep Clean - An Autonomous Robotic Cleaning Assistant for Professional Office Cleaning. IEEE ICRA, 4470-4477. DOI: 10.1109/ICRA.2015.7139818.
+Author-hosted full text:
+https://publica-rest.fraunhofer.de/server/api/core/bitstreams/294f9476-d48b-42a4-840c-2bf4f9b78743/content
+Ten integrated trials in two office environments involved dirt detection, floor cleaning and bin emptying. Marked bins and deliberately placed dirt were part of the evaluation. The system rechecked cleaning and referred unresolved cases to an operator. Relevant design inspiration: separate inspection, cleaning and checking; record surface and access. Do not transfer its performance results to our systems.
+
+5. Man, H., Rueda, J., Vega, J., Vinstrup, J., Andersen, L. L. and Navarro, E. (2024). Identification of physically demanding work tasks among cleaners: field study using electromyography. Annals of Work Exposures and Health, 68(7), 748-755. DOI: 10.1093/annweh/wxae053.
+https://academic.oup.com/annweh/article/68/7/748/7698017
+Seven cleaners performed nine tasks at a cosmetics factory, including office-floor, wall and ceiling mopping. This supports treating height, surface and method as distinct task characteristics. It is not a representative survey of office-cleaning frequencies and supplies no individual fatigue prediction or safe robot-force limit for our app.
+
+6. Memmesheimer, R. et al. (2025). Cleaning Robots in Public Spaces: A Survey and Proposal for Benchmarking Based on Stakeholders Interviews. RoboCup 2024: Robot World Cup XXVII, LNCS 15570, 373-385. DOI: 10.1007/978-3-031-85859-8_32.
+https://link.springer.com/chapter/10.1007/978-3-031-85859-8_32
+Published chapter, first online 21 April 2025; not solely a preprint. Seven qualitative stakeholder interviews concern OUTDOOR cleaning. Useful for later campus/outdoor scenarios and distinctions among task, desired result and site conditions. Do not present it as an indoor-office study or validation of our framework.
+
+HOW THE APP USES THESE SOURCES
+
+The menu contains whiteboards, interior glass, wall marks, desks/worktops, floors and ordinary bins. Whiteboards come from our team's prototype; the broader categories are grounded in the sources above. These are ordinary task requests, not approved robot capabilities.
+
+The app asks what needs cleaning and where, then checks declared conditions, manual permission, skills and availability. Special access keeps a task outside its ordinary manual routes. Two planning stages show ordering and shared-person conflicts, without estimating duration. Material-specific methods, chemical handling, measured cleaning quality and timed scheduling remain outside this example.
+
+New physical buildings remain outside the current robot evidence. Manual routes rely on the supplied example team and explicitly declared skills and conditions. A user declaration does not verify a person's training or a workplace's safety.
+
+This research can ground the scenario design. It does not establish usability, reduced workload, better decisions or a deployed digital twin. Those would need separate evaluation.
+
+SITE-CHECKS SUCCESSOR, 9 November 2026
+A seventh request type, exterior facade work, now records a specialist-review need. It has no ordinary manual or robot assignment. HSE guidance and research-only product suggestions are documented separately in SITE_CHECK_AND_ROBOT_SOURCES.txt. The updated form also records company/customer/building identity and guided declarations; these do not establish safety or new robot capability.
