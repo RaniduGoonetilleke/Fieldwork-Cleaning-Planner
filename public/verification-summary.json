@@ -1,62 +1,52 @@
 {
   "schemaVersion": 1,
   "release": "manager-pack-r5-20261114",
-  "checkedOn": "2026-11-14",
+  "checkedOn": "2026-11-15",
   "counts": {
     "pythonTests": 309,
-    "javascriptTestFiles": 15
+    "javascriptTestFiles": 18
   },
-  "summary": "These are software checks of the planning calculation and this page. They check the stated behavior for the inputs tested; they do not measure planning benefit.",
+  "summary": "Software checks cover the preserved research service and the new provisional resource-booking interface. They do not measure planning benefit or real-world cleaning performance.",
   "checks": [
     {
       "name": "Python tests",
-      "result": "309 passed on this release with Python 3.12.14",
-      "shows": "The planning service gives the expected answer for each tested input, refuses malformed input and refuses an altered download. It also refuses a request that carries a job review."
+      "result": "309 passed with Python 3.12.14",
+      "shows": "The preserved research service, guards, exact research exports, local HTTP routes and source disclosures pass their tests."
     },
     {
       "name": "JavaScript test files",
-      "result": "15 passed on this release with Node 24.22.1",
-      "shows": "The page’s own logic is tested directly: stale assessments, explanations, exact downloads, the notebook store and the job-review notes. The job-review tests include that changing an outcome removes its recorded check, and that a note tied to a plan cannot be retyped under the old plan link. They also include that a form opened on an earlier version of a note is refused once the saved note has changed, and that a note from a plan made from an invented example stays out of the counts. Two files check the page source for required safeguards. How the page behaves in use is covered by the browser walk-through. The report tests check that readable exports preserve statuses, force requests and choices, declared conditions, separate outcome checks and exact JSON backups."
+      "result": "18 passed with Node 24.22.1",
+      "shows": "These include 43 functional tests for provisional bookings, transaction storage and booking reports. The subprocess CLI test is skipped in the restricted test environment; direct CLI checks were run separately. Existing research and job-review tests also pass."
     },
     {
-      "name": "Release file check",
-      "result": "Every listed file matches",
-      "shows": "The files are the ones this release was checked with."
+      "name": "Manager browser checks",
+      "result": "Local Chromium flows checked at desktop and phone width",
+      "shows": "Window area, unknown checks, shared-helper conflicts, later-stage booking, changed-job rechecks, stale-tab reload and simultaneous booking attempts were exercised. Both themes were inspected. Only one of two competing reservations was saved."
+    },
+    {
+      "name": "Manager PDF and exact export",
+      "result": "Three-page PDF inspected; downloaded exact export replayed",
+      "shows": "A PDF from three invented test jobs was generated in the browser and its pages inspected. The browser-generated exact file reproduced three assessments with the Node CLI. Altered assessments are refused."
     },
     {
       "name": "Research records",
       "result": "19 files match their recorded fingerprints",
-      "shows": "The robot records and decision rules are unchanged copies from the corrected research package."
+      "shows": "The original research records and decision rules remain byte-identical to the source release. The manager resource-booking demonstration does not change them."
     },
     {
-      "name": "Two-person staffing",
-      "result": "5,460 skill patterns, no disagreement",
-      "shows": "With two people and up to six ready jobs in a stage, the staffing step staffs as many jobs as a brute-force search in either listed order, and it chooses the earliest listed jobs that can be staffed together. This enumeration was performed on the earlier app; the staffing procedure is unchanged."
+      "name": "Release file check",
+      "result": "Every listed file matches",
+      "shows": "The local upload folder is recorded in RELEASE_MANIFEST.json. A deployed site and a fresh GitHub download still need checking after publication."
     },
     {
-      "name": "Earlier job-review browser checks",
-      "result": "516 checks reported for job-reviews-r3-20261113",
-      "shows": "These checks belong to the earlier release. The current update changes only presentation and release identity; its own customer-screen checks are documented separately in the README. The earlier checks are not presented as a new run on this copy."
+      "name": "Robot card rotation",
+      "result": "Hover, selection, pause and step changes checked in local Chromium",
+      "shows": "An unselected hovered robot turns, stops when the pointer leaves, and a selected robot continues without hover. Changing the selected robot stops the previous one. People stay still. Navigation removes the old canvases. Independent source review covered resource cleanup, reduced-motion and hidden-tab handling. This is a visual effect only."
     },
     {
-      "name": "Earlier customer screen checks",
-      "result": "44 pass in Chromium at desktop and phone widths",
-      "shows": "These 44 checks belong to customer-view-20261113. This release has separate checks of the readable PDF controls, six generated PDFs, optional JSON/replay and updated tour; see README."
-    },
-    {
-      "name": "Earlier PDF and walkthrough checks",
-      "result": "Six PDF examples / 18 pages; 116-second video",
-      "shows": "Real browser PDF generation and page layout were inspected. The video decodes and plays, and closing its dialog pauses it. Optional exact JSON replay still returns the same plan. These are presentation checks, not evidence of user benefit. The PDF checks belong to manager-pack-20261113; the following presentation update changes the walkthrough only."
-    },
-    {
-      "name": "Earlier walkthrough presentation (r2)",
-      "result": "18 scenes reviewed; video decoded and played",
-      "shows": "The larger chapter cards and close-up app screens were inspected. Three targeted JavaScript contract checks passed again. Local desktop Chromium playback and pause-on-close were checked; the full earlier test suite was not rerun for this presentation-only update."
-    },
-    {
-      "name": "Side-panel walkthrough (r3)",
-      "result": "18 title panels reviewed; 152-second video decoded and played",
-      "shows": "The panels slide in from the left, hold for 2.5 seconds and retract left. The badges and captions stay visible, and the earlier screen-reading time is preserved. Local Chromium playback and pause-on-close passed. This is a presentation check; the full software suite was not rerun."
+      "name": "Stable team selection and human cards",
+      "result": "21 targeted callback checks pass; robot and human choices checked in local Chromium",
+      "shows": "Changing the selected robot or person keeps all five portraits mounted. Worker plans and existing booking conflicts were checked through the visible controls. Stage changes update availability without replacing the models. Light and dark themes and a 390px viewport were inspected. The UR3 and UR5 square display bases contain the bottom geometry through a full turn. Three booking test files and the isolated motion harness also pass."
     }
   ],
   "notShown": [
@@ -68,5 +58,6 @@
     "No job review from real work. The job-review step has only been tried with invented entries.",
     "No live robot. The page cannot connect to, start or stop a robot.",
     "No formal accessibility audit."
-  ]
+  ],
+  "uiRelease": "building-planner-20261115"
 }
