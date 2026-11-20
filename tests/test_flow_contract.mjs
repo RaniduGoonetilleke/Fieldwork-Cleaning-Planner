@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const read = name => fs.readFileSync(new URL('../public/' + name, import.meta.url), 'utf8');
-const html = read('index.html'), customer = read('customer.js'), team = read('team.js'), registry = read('registry-ui.js'), css = read('flow.css');
+const html = read('research.html'), customer = read('customer.js'), team = read('team.js'), registry = read('registry-ui.js'), css = read('flow.css');
 
 assert.match(html, /<html lang="en" data-theme="dark">/, 'Dark is the first theme.');
 assert.match(html, /id="theme-switch"/, 'A light-theme switch stays available.');

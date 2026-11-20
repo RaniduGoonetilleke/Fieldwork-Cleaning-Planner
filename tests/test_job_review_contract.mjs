@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 
 const read = name => readFileSync(new URL('../public/' + name, import.meta.url), 'utf8');
-const store = read('job-review-store.js'), ui = read('job-review-ui.js'), registry = read('registry-ui.js'), customer = read('customer.js'), html = read('index.html');
+const store = read('job-review-store.js'), ui = read('job-review-ui.js'), registry = read('registry-ui.js'), customer = read('customer.js'), html = read('research.html');
 
 // 1. No path into planning or onto the network.
 for (const [name, text] of [['job-review-store.js', store], ['job-review-ui.js', ui]]) {

@@ -357,7 +357,7 @@ class EvidenceCheckWordingTests(unittest.TestCase):
         self.assertIn('pending review', note['status'])
         readme = (ROOT / 'README.md').read_text()
         self.assertIn(note['supported'], readme); self.assertIn('pending correction', readme)
-        app_text = ''.join((ROOT / name).read_text() for name in ('customer_service.py', 'public/customer.js', 'public/team.js', 'public/registry-ui.js', 'public/index.html'))
+        app_text = ''.join((ROOT / name).read_text() for name in ('customer_service.py', 'public/customer.js', 'public/team.js', 'public/registry-ui.js', 'public/index.html', 'public/research.html'))
         self.assertEqual(app_text.count(note['recordSays']), 1)      # quoted once, as the sentence being corrected
         self.assertNotIn('no contact-force value was measured', app_text.replace(note['recordSays'], ''))
 

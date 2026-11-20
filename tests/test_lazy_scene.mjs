@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const source=fs.readFileSync(new URL('../public/team.js',import.meta.url),'utf8');
-const html=fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8');
+const html=fs.readFileSync(new URL('../public/research.html',import.meta.url),'utf8');
 const extract=name=>source.slice(source.indexOf('function '+name+'('),source.indexOf('\nfunction ',source.indexOf('function '+name+'(')+1));
 const nodes=new Map();
 const node=id=>{if(!nodes.has(id))nodes.set(id,{hidden:id==='team-stage',setAttribute(){},removeAttribute(){},querySelector(){return {focus(){}}},scrollIntoView(){}});return nodes.get(id);};
