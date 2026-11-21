@@ -2,7 +2,7 @@
 
 Enter a building job, choose the team, record the work checks and save a resource plan. A second job shows which resources are already booked.
 
-Manager interface: `building-planner-20261115`. The research service keeps its existing `manager-pack-r5-20261114` identity.
+Manager interface: `building-planner-time-20261121`. The research service keeps its existing `manager-pack-r5-20261114` identity.
 
 **This is a planning demonstration.** A booking holds resources in a local draft. It does not establish robot suitability, approve work or start a robot. The research evidence and its decision rules remain available separately and are unchanged.
 
@@ -98,3 +98,9 @@ Saved bookings, notebook entries, job reviews and the theme stay in browser stor
 Robot meshes come from Universal Robots and Unitree; the person models are Quaternius's CC0 Background Posed Humans. Their licences and source records remain under `public/models/` and `provenance/`. The models illustrate resources only. Their turn is a display effect, not simulated robot motion. The G1 display mesh is not the exact model used in the simulation experiments. The fallback SVG drawings are included with this app.
 
 The research tour's quiet music is Blue Skies by HoliznaCC0 from Lazy Summer Lofi (CC0 1.0); its source is recorded in `provenance/WALKTHROUGH_MUSIC.json`. The app works without the video or WebGL.
+
+## Optional completion-time estimate
+
+After choosing the team, a manager can enter total minutes or, for window jobs, minutes per square metre across the chosen faces. No rate is supplied by the app. The plan, saved-job card and PDF label the result as a manager estimate. The JSON export preserves the entered basis and value for checking. Blank means unknown, and zero, negative and non-finite values are rejected. Changing the selected team clears the estimate. Estimates do not qualify a robot, override checks, free resources early or create a clock-based schedule. Include setup and finishing checks in the entered estimate.
+
+Existing browser bookings without timing fields still open. Exact exports remain tied to their release; use the earlier release to replay its exports.

@@ -4,7 +4,7 @@
   "checkedOn": "2026-11-15",
   "counts": {
     "pythonTests": 309,
-    "javascriptTestFiles": 18
+    "javascriptTestFiles": 19
   },
   "summary": "Software checks cover the preserved research service and the new provisional resource-booking interface. They do not measure planning benefit or real-world cleaning performance.",
   "checks": [
@@ -15,7 +15,7 @@
     },
     {
       "name": "JavaScript test files",
-      "result": "18 passed with Node 24.22.1",
+      "result": "19 files passed with Node 24.22.1",
       "shows": "These include 43 functional tests for provisional bookings, transaction storage and booking reports. The subprocess CLI test is skipped in the restricted test environment; direct CLI checks were run separately. Existing research and job-review tests also pass."
     },
     {
@@ -47,6 +47,11 @@
       "name": "Stable team selection and human cards",
       "result": "21 targeted callback checks pass; robot and human choices checked in local Chromium",
       "shows": "Changing the selected robot or person keeps all five portraits mounted. Worker plans and existing booking conflicts were checked through the visible controls. Stage changes update availability without replacing the models. Light and dark themes and a 390px viewport were inspected. The UR3 and UR5 square display bases contain the bottom geometry through a full turn. Three booking test files and the isolated motion harness also pass."
+    },
+    {
+      "name": "Optional job duration",
+      "result": "Seven timing tests passed; local Chromium flow checked",
+      "shows": "An entered 2 minutes/m\u00b2 across 24 m\u00b2 gives 48 minutes. Team changes clear the estimate. Saving, exact export, PDF report text, invalid values and unchanged booking guards are covered. The estimate is a manager assumption, not measured robot performance."
     }
   ],
   "notShown": [
@@ -59,5 +64,5 @@
     "No live robot. The page cannot connect to, start or stop a robot.",
     "No formal accessibility audit."
   ],
-  "uiRelease": "building-planner-20261115"
+  "uiRelease": "building-planner-time-20261121"
 }

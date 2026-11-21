@@ -1,7 +1,8 @@
+import {timingDescription} from './booking-time.mjs';
 import {validateState, assessJob, quantities, requiredResources, availability, RESOURCE_IDS, CHECK_KEYS, SCOPE} from './booking-core.mjs';
 
 export const BOOKING_EXPORT_SCHEMA = 'fieldwork-booking-export-v1';
-export const BOOKING_RELEASE = 'building-planner-20261115';
+export const BOOKING_RELEASE = 'building-planner-time-20261121';
 const resourceNames = {UR3: 'UR3', UR5: 'UR5', G1: 'G1', H1: 'Robot helper', H2: 'Cleaner'};
 const jobNames = {windows: 'Windows', whiteboards: 'Whiteboards', walls: 'Walls', desks: 'Desks', floors: 'Floors', bins: 'Bins', facade: 'Building facade'};
 const checkNames = {area: 'Area check', permission: 'Permission to work', surface: 'Surface check', people: 'People and roles', equipment: 'Equipment check', access: 'Access check'};
@@ -74,7 +75,7 @@ export function bookingReport(input) {
   const title = state.context.building ? state.context.building + ' — draft resource plan' : 'Draft resource plan';
   const blocks = [block('kicker', 'ENTERED BUILDING JOBS'), block('title', title)];
   for (const field of ['company', 'customer']) if (state.context[field]) blocks.push(body((field === 'company' ? 'Cleaning company' : 'Customer') + ': ' + state.context[field]));
-  blocks.push(note(SCOPE), body('Bookings are local to this browser. Availability is a planning assumption or user declaration, not live status from robots or a shared company calendar.'), body('Jobs in the same stage compete for the same resources. The two stages express order, without measured durations, travel times or costs.'));
+  blocks.push(note(SCOPE), body('Bookings are local to this browser. Availability is a planning assumption or user declaration, not live status from robots or a shared company calendar.'), body('Jobs in the same stage compete for the same resources. The two stages express order. Optional durations are manager estimates, not measured performance; they do not change resource bookings or include travel automatically.'));
   if (!state.jobs.length) blocks.push(body('No jobs have been saved.'));
   for (const stage of [1, 2]) {
     blocks.push(block('section', 'Stage ' + stage + ' resources'));
@@ -88,6 +89,7 @@ export function bookingReport(input) {
       job.groups.forEach((group, index) => blocks.push(body('Group ' + (index + 1) + ': ' + group.count + ' windows, about ' + group.width + ' m wide × ' + group.height + ' m high, ' + faceWords[group.faces] + '.')));
       blocks.push(body('Total: ' + total.windows + ' windows; about ' + areaText(total.area) + ' m² across the requested faces.'), note('Area assumes rectangular windows: count × width × height, doubled for both faces. These quantities do not establish robot capacity, reach, cleaning speed or suitability.'));
     }
+    blocks.push(block('label', 'Estimated completion time'), body(timingDescription(job)), note('Duration after work starts, not a clock finish time. The manager must include setup and finishing checks.'));
     blocks.push(block('label', 'Entered checks'));
     for (const key of CHECK_KEYS) blocks.push(body(checkNames[key] + ': ' + checkWords[job.checks[key]] + '.'));
     if (assessment.reasons.length) blocks.push(block('label', 'What needs attention'), ...assessment.reasons.map(body));
@@ -103,6 +105,7 @@ function compactMethod(job) {
   const groups = job.groups.map((group, index) => `${index + 1}:${group.count}×${group.width}×${group.height}m/${group.faces}`).join('; ');
   const lines = ['Requested: ' + modeName(job) + '; access: ' + job.access + '.', 'Requested team: ' + names(requiredResources(job)) + '.'];
   if (groups) lines.push('Window groups (count×width×height; faces): ' + groups + '.', 'Total: ' + total.windows + ' windows, approx. ' + areaText(total.area) + ' m².');
+  if (job.timeEstimate) lines.push(timingDescription(job));
   if (job.notes) lines.push('Job notes: ' + job.notes);
   lines.push('Draft resource plan only; suitability unconfirmed. No work is approved by this snapshot.');
   const value = lines.join('\n');

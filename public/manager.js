@@ -1,3 +1,4 @@
+import {timeEstimate, durationLabel, timingDescription} from './booking-time.mjs';
 import {initialState, CHECK_KEYS, normalizeJob, availability, assessJob} from './booking-core.mjs';
 import {createBookingStore} from './booking-store.mjs';
 import {bookingReport, exactBookingExport, verifyBookingExport, planSnapshots} from './booking-report.mjs';
@@ -28,7 +29,7 @@ const storeStatus=()=>{$('saved-state').textContent=storageError?'Browser storag
 function message(text){$('manager-alert').textContent=text;$('manager-alert').hidden=!text;}
 function markStale(){stale=true;$('manager-stale').hidden=false;storeStatus();document.querySelectorAll('[data-write]').forEach(n=>n.disabled=true);}
 function invalidate(){draft.checks=unknown();if(draft.status==='reserved')draft.status='draft';}
-function setField(key,value){if(draft[key]!==value){invalidate();draft[key]=value;}}
+function setField(key,value){if(draft[key]!==value){invalidate();draft[key]=value;if(['mode','workerId','kind'].includes(key))delete draft.timeEstimate;}}
 function heading(kicker,title,text){const div=el('div');div.append(el('p','eyebrow',kicker),el('h1','',title),el('p','intro',text));return div;}
 function field(label,value,onChange,options={}){
  const wrap=el('label','field'+(options.full?' full':''));wrap.append(el('span','',label));const input=el(options.options?'select':options.multiline?'textarea':'input');
@@ -42,7 +43,7 @@ function safeAssessment(){try{return assessJob(state,currentJob());}catch(error)
 function stageControl(onChange=render){const bar=el('div','stage-bar');bar.append(el('strong','',draft.name||'Your next job'));const select=el('select');select.setAttribute('aria-label','When this job happens');for(const [value,text] of Object.entries(stages)){const op=el('option','',text);op.value=value;select.append(op);}select.value=draft.stage;select.addEventListener('change',()=>{setField('stage',Number(select.value));onChange();});bar.append(select);return bar;}
 function portrait(id,interactionElement=null,selected=false){const host=el('div','resource-portrait');const cleanup=mountPortrait(host,id,{interactionElement,selected});cleanups.push(cleanup);return {element:host,setSelected:value=>cleanup.setSelected?.(value)};}
 function stateChip(id,exclude=true){const status=availability(state,id,draft.stage,exclude?draft.id:'');return el('span','status-chip '+status.status,status.status==='free'?'Available':status.label);}
-function navigation(back,next,label){const nav=el('div','manager-actions');nav.append(back?button('← Back',()=>{step=back;render(true);},'text-button'):el('span','small-note','No time estimates are assumed.'));if(next)nav.append(button(label,()=>go(next),'primary'));return nav;}
+function navigation(back,next,label){const nav=el('div','manager-actions');nav.append(back?button('← Back',()=>{step=back;render(true);},'text-button'):el('span','small-note','Add an optional time estimate after choosing the team.'));if(next)nav.append(button(label,()=>go(next),'primary'));return nav;}
 async function commit(command){
  if(storageError)throw storageError;
  if(stale)throw new Error('This plan changed in another tab. Reload and check the team before saving.');
@@ -58,7 +59,7 @@ async function saveContext(){
  }
 }
 async function go(next){
- message('');try{if(step===1){currentJob();await saveContext();}if(next===3&&state.jobs.some(j=>j.id===draft.id)){await commit({type:'saveJob',job:currentJob()});draft=structuredClone(state.jobs.find(j=>j.id===draft.id));}step=next;render(true);}catch(error){message(error.message);}
+ message('');try{if(step===1){currentJob();await saveContext();}if(next>=3)currentJob();if(next===3&&state.jobs.some(j=>j.id===draft.id)){await commit({type:'saveJob',job:currentJob()});draft=structuredClone(state.jobs.find(j=>j.id===draft.id));}step=next;render(true);}catch(error){message(error.message);}
 }
 function renderJob(){
  const out=el('div');out.append(heading('01 / THE JOB','What needs cleaning?','Start with the building and the amount of work.'));
@@ -88,7 +89,7 @@ function renderTeam(){
  const busyNote=el('p','small-note');
  function choose(id){
   if(id==='H1'||id==='H2'){setField('mode','manual');setField('workerId',id);}else setField('mode',id);
-  refreshTeam();
+  refreshTeam();refreshTiming?.();
  }
  function refreshTeam(){
   const robotChosen=draft.mode!=='manual', helperFree=availability(state,'H1',draft.stage,draft.id).status==='free';
@@ -120,12 +121,24 @@ function renderTeam(){
  const people=el('div','people-grid');people.setAttribute('role','group');people.setAttribute('aria-label','People');
  people.append(resourceCard('H2','Manual cleaning'),resourceCard('H1','Robot support or manual cleaning'));
  out.append(people,selection,el('p','scope-note','Available means free to book. Confirm suitability for this particular job in the next step. This prototype has two people and two work stages.'));
+ const timing=timingEditor();const refreshTiming=timing.refresh;out.append(timing.element);
  const busy=el('details','plain-details');busy.append(el('summary','','Is someone already busy elsewhere?'),busyNote);
  for(const id of ['UR3','UR5','G1','H1','H2']){
   const row=el('label','busy-row');row.append(el('span','',names[id]));const check=el('input');check.type='checkbox';check.setAttribute('aria-label',`${names[id]} busy elsewhere`);check.dataset.write='';busyInputs.set(id,check);
   check.addEventListener('change',async()=>{try{await commit({type:'setBusy',id,stage:draft.stage,busy:check.checked});invalidate();refreshStage();}catch(error){refreshTeam();message(error.message);}});row.append(check);busy.append(row);
  }
  out.append(busy,navigation(1,3,'Check the work →'));refreshTeam();return out;
+}
+function timingEditor(){
+ const section=el('section','form-section');section.append(el('h2','','How long might this job take?'),el('p','small-note','Optional: enter your estimate for this team, including setup and finishing checks. Leave it blank if you do not know.'));
+ let basis=draft.timeEstimate?.basis||'total';const controls=el('div','form-grid'), preview=el('p','timing-preview');preview.setAttribute('role','status');
+ const options={total:'Total minutes for this job'};if(['windows','facade'].includes(draft.kind))options.area='Minutes per square metre';
+ const select=field('Estimate using',basis,value=>{basis=value;delete draft.timeEstimate;invalidate();refresh();},{options});
+ const amount=field(basis==='area'?'Minutes per m²':'Total minutes',draft.timeEstimate?.minutes??'',value=>{if(value===''){delete draft.timeEstimate;invalidate();}else setField('timeEstimate',{basis,minutes:value});show();},{type:'number',min:0.001,max:1000000,step:'any',placeholder:'Your estimate'});
+ controls.append(select,amount);section.append(controls,preview,el('p','small-note','This is your planning assumption, not a measured robot speed. It does not release resources early or set a clock finish time.'));
+ function show(){try{const estimate=timeEstimate(draft);preview.textContent=estimate?'Estimated duration: about '+durationLabel(estimate.minutes):'Estimated duration: not entered.';}catch(error){preview.textContent=error.message;}}
+ function refresh(){basis=draft.timeEstimate?.basis||basis;select.querySelector('select').value=basis;amount.querySelector('span').textContent=basis==='area'?'Minutes per m²':'Total minutes';amount.querySelector('input').value=draft.timeEstimate?.minutes??'';show();}
+ show();return {element:section,refresh};
 }
 function renderChecks(){
  const out=el('div');out.append(heading('03 / THE CHECKS','Is this job ready?','Record what has been checked. Unknown answers can stay in a draft.'));
@@ -143,6 +156,7 @@ function renderPlan(){
  out.append(heading('04 / THE PLAN',reserved?'Resources reserved.':'Your job plan.','A booking holds resources in your draft; it does not start the work.'));
  const status=el('section','plan-status');status.append(el('strong','',reserved?'✓ Reserved in this draft':assessment.canReserve?'Ready for a draft booking':'Save now, finish the checks later'),el('p','',reserved?`Stage ${draft.stage}. These resources are unavailable for another job in the same stage.`:assessment.canReserve?'The recorded checks pass and the chosen resources are free.':'The job can stay as a draft while you work through the points below.'));out.append(status);
  const facts=el('div','plan-facts');for(const [label,value] of [['Job',draft.name||'Not named'],['Place',`${state.context.building||'No building'} · ${draft.place||'No place'}`],['Team',draft.mode==='manual'?names[draft.workerId]:`${draft.mode} + Robot helper`],['When',stages[draft.stage]]]){const cell=el('div');cell.append(el('span','',label),el('b','',value));facts.append(cell);}out.append(facts);
+ const timing=el('section','plan-status');timing.append(el('h2','','Estimated completion time'));try{timing.append(el('p','',timingDescription(draft)));}catch(error){timing.append(el('p','',error.message));}timing.append(button('Change time estimate',()=>{step=2;render(true);},'text-button'),el('p','small-note','Duration after work starts, not a clock finish time. Include setup and finishing checks in your estimate. Stage bookings are unchanged.'));out.append(timing);
  if(assessment.quantities&&draft.groups.length)out.append(el('p','small-note',`${assessment.quantities.windows} windows · approximately ${areaLabel(assessment.quantities.area)} m² including the chosen sides.`));
  if(assessment.reasons.length){const list=el('ul','reason-list');for(const reason of assessment.reasons)list.append(el('li','',reason.replace(/^H1:/,'Robot helper:').replace(/^H2:/,'Cleaner:')));out.append(list);}
  if(draft.notes)out.append(el('p','small-note',draft.notes));
@@ -156,8 +170,8 @@ function renderPlan(){
 }
 function renderBoard(){const board=$('manager-board');board.replaceChildren();const header=el('div','board-heading');header.append(el('h2','','Your saved jobs'),el('span','',`${state.jobs.length} saved`));board.append(header);
  if(!state.jobs.length)board.append(el('div','empty-board','Start with one job. Then add another to see which resources are still free.'));
- for(const job of state.jobs){const card=el('section','board-card'+(job.id===draft.id?' current':''));card.append(el('span','status-chip '+(job.status==='reserved'?'booked':''),job.status==='reserved'?'Resources reserved':job.status==='released'?'Resources released':'Draft · no resources held'),el('h3','',job.name),el('p','',`${job.place} · Stage ${job.stage}`),el('p','',job.mode==='manual'?names[job.workerId]:`${job.mode} + Robot helper`));card.append(button('Open job',()=>{draft=structuredClone(job);step=4;message('');render(true);},'text-button'));card.append(button('Record outcome',()=>openReview(job.id),'text-button'));board.append(card);}
- const resources=el('section','board-card');resources.append(el('h3','',`Resources · Stage ${draft.stage}`));for(const id of ['UR3','UR5','G1','H1','H2']){const row=el('div','board-resource');row.append(el('span','',names[id]),stateChip(id,false));resources.append(row);}board.append(resources,el('p','small-note','Jobs in the same stage happen together. Stage 2 begins after stage 1. No durations are estimated.'));
+ for(const job of state.jobs){const card=el('section','board-card'+(job.id===draft.id?' current':''));card.append(el('span','status-chip '+(job.status==='reserved'?'booked':''),job.status==='reserved'?'Resources reserved':job.status==='released'?'Resources released':'Draft · no resources held'),el('h3','',job.name),el('p','',`${job.place} · Stage ${job.stage}`),el('p','',job.mode==='manual'?names[job.workerId]:`${job.mode} + Robot helper`));card.append(el('p','small-note',timingDescription(job)));card.append(button('Open job',()=>{draft=structuredClone(job);step=4;message('');render(true);},'text-button'));card.append(button('Record outcome',()=>openReview(job.id),'text-button'));board.append(card);}
+ const resources=el('section','board-card');resources.append(el('h3','',`Resources · Stage ${draft.stage}`));for(const id of ['UR3','UR5','G1','H1','H2']){const row=el('div','board-resource');row.append(el('span','',names[id]),stateChip(id,false));resources.append(row);}board.append(resources,el('p','small-note','Jobs in the same stage happen together. Stage 2 begins after stage 1. Entered time estimates do not change stage bookings.'));
 }
 function render(focus=false){for(const cleanup of cleanups)cleanup();cleanups=[];const steps=$('manager-steps');steps.replaceChildren();['Job','Team','Checks','Plan'].forEach((label,i)=>{const b=button('',()=>go(i+1),'');b.append(el('b','',String(i+1)),document.createTextNode(label));if(step===i+1)b.setAttribute('aria-current','step');b.disabled=i>0&&!draft.name;b.setAttribute('aria-label',`${i+1}. ${label}`);steps.append(b);});
  $('manager-content').replaceChildren([renderJob,renderTeam,renderChecks,renderPlan][step-1]());renderBoard();updateTotals();storeStatus();if(focus){const title=$('manager-content').querySelector('h1');title.tabIndex=-1;title.focus({preventScroll:true});$('main').scrollIntoView({behavior:'auto',block:'start'});}}
