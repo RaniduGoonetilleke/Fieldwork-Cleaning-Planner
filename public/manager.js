@@ -1,7 +1,8 @@
+import {billEstimate, billLines, billResources, BILL_NAMES, BILL_CURRENCIES, BILL_SCOPE, money} from './booking-bill.mjs';
 import {timeEstimate, durationLabel, timingDescription} from './booking-time.mjs';
 import {initialState, CHECK_KEYS, normalizeJob, availability, assessJob} from './booking-core.mjs';
 import {createBookingStore} from './booking-store.mjs';
-import {bookingReport, exactBookingExport, verifyBookingExport, planSnapshots} from './booking-report.mjs';
+import {bookingReport, estimatedBillReport, exactBookingExport, verifyBookingExport, planSnapshots} from './booking-report.mjs';
 import {downloadPlanPdf} from './plan-report.mjs';
 import {mountPortrait} from './resource-portraits.mjs';
 import {initRegistry} from './registry-ui.js';
@@ -29,7 +30,7 @@ const storeStatus=()=>{$('saved-state').textContent=storageError?'Browser storag
 function message(text){$('manager-alert').textContent=text;$('manager-alert').hidden=!text;}
 function markStale(){stale=true;$('manager-stale').hidden=false;storeStatus();document.querySelectorAll('[data-write]').forEach(n=>n.disabled=true);}
 function invalidate(){draft.checks=unknown();if(draft.status==='reserved')draft.status='draft';}
-function setField(key,value){if(draft[key]!==value){invalidate();draft[key]=value;if(['mode','workerId','kind'].includes(key))delete draft.timeEstimate;}}
+function setField(key,value){if(draft[key]!==value){invalidate();draft[key]=value;if(['mode','workerId','kind'].includes(key)){delete draft.timeEstimate;delete draft.billing;}}}
 function heading(kicker,title,text){const div=el('div');div.append(el('p','eyebrow',kicker),el('h1','',title),el('p','intro',text));return div;}
 function field(label,value,onChange,options={}){
  const wrap=el('label','field'+(options.full?' full':''));wrap.append(el('span','',label));const input=el(options.options?'select':options.multiline?'textarea':'input');
@@ -89,7 +90,7 @@ function renderTeam(){
  const busyNote=el('p','small-note');
  function choose(id){
   if(id==='H1'||id==='H2'){setField('mode','manual');setField('workerId',id);}else setField('mode',id);
-  refreshTeam();refreshTiming?.();
+  refreshTeam();refreshTiming?.();refreshBilling();
  }
  function refreshTeam(){
   const robotChosen=draft.mode!=='manual', helperFree=availability(state,'H1',draft.stage,draft.id).status==='free';
@@ -121,7 +122,7 @@ function renderTeam(){
  const people=el('div','people-grid');people.setAttribute('role','group');people.setAttribute('aria-label','People');
  people.append(resourceCard('H2','Manual cleaning'),resourceCard('H1','Robot support or manual cleaning'));
  out.append(people,selection,el('p','scope-note','Available means free to book. Confirm suitability for this particular job in the next step. This prototype has two people and two work stages.'));
- const timing=timingEditor();const refreshTiming=timing.refresh;out.append(timing.element);
+ let refreshBilling=()=>{};const timing=timingEditor(()=>refreshBilling());const refreshTiming=timing.refresh;out.append(timing.element);const billing=billingEditor();refreshBilling=billing.refresh;out.append(billing.element);
  const busy=el('details','plain-details');busy.append(el('summary','','Is someone already busy elsewhere?'),busyNote);
  for(const id of ['UR3','UR5','G1','H1','H2']){
   const row=el('label','busy-row');row.append(el('span','',names[id]));const check=el('input');check.type='checkbox';check.setAttribute('aria-label',`${names[id]} busy elsewhere`);check.dataset.write='';busyInputs.set(id,check);
@@ -129,16 +130,35 @@ function renderTeam(){
  }
  out.append(busy,navigation(1,3,'Check the work →'));refreshTeam();return out;
 }
-function timingEditor(){
+function timingEditor(onChange=()=>{}){
  const section=el('section','form-section');section.append(el('h2','','How long might this job take?'),el('p','small-note','Optional: enter your estimate for this team, including setup and finishing checks. Leave it blank if you do not know.'));
  let basis=draft.timeEstimate?.basis||'total';const controls=el('div','form-grid'), preview=el('p','timing-preview');preview.setAttribute('role','status');
  const options={total:'Total minutes for this job'};if(['windows','facade'].includes(draft.kind))options.area='Minutes per square metre';
  const select=field('Estimate using',basis,value=>{basis=value;delete draft.timeEstimate;invalidate();refresh();},{options});
  const amount=field(basis==='area'?'Minutes per m²':'Total minutes',draft.timeEstimate?.minutes??'',value=>{if(value===''){delete draft.timeEstimate;invalidate();}else setField('timeEstimate',{basis,minutes:value});show();},{type:'number',min:0.001,max:1000000,step:'any',placeholder:'Your estimate'});
  controls.append(select,amount);section.append(controls,preview,el('p','small-note','This is your planning assumption, not a measured robot speed. It does not release resources early or set a clock finish time.'));
- function show(){try{const estimate=timeEstimate(draft);preview.textContent=estimate?'Estimated duration: about '+durationLabel(estimate.minutes):'Estimated duration: not entered.';}catch(error){preview.textContent=error.message;}}
+ function show(){try{const estimate=timeEstimate(draft);preview.textContent=estimate?'Estimated duration: about '+durationLabel(estimate.minutes):'Estimated duration: not entered.';}catch(error){preview.textContent=error.message;}onChange();}
  function refresh(){basis=draft.timeEstimate?.basis||basis;select.querySelector('select').value=basis;amount.querySelector('span').textContent=basis==='area'?'Minutes per m²':'Total minutes';amount.querySelector('input').value=draft.timeEstimate?.minutes??'';show();}
  show();return {element:section,refresh};
+}
+function billingEditor(){
+ const section=el('section','form-section');section.append(el('h2','','What will the job cost?'),el('p','small-note','Enter your company’s hourly charges for this booking. Leave unknown rates blank; enter 0 only when there is no charge. Changing team or currency clears the rates.'));
+ const controls=el('div','form-grid'),summary=el('div','bill-preview');summary.setAttribute('role','status');
+ let currency=draft.billing?.currency||'GBP';
+ const currencyField=field('Billing currency',currency,value=>{currency=value;setField('billing',{currency,rates:Object.fromEntries(billResources(draft).map(id=>[id,null]))});refresh();},{options:BILL_CURRENCIES});
+ section.append(currencyField,controls,summary,el('p','small-note','Each selected resource is charged for the full estimated job duration. Enter selling rates, including any overhead you want to charge.'),el('p','small-note',BILL_SCOPE));
+ function show(){summary.replaceChildren();try{for(const line of billLines(draft))summary.append(el(line.startsWith('Estimated total')?'strong':'p','',line));}catch(error){summary.append(el('p','',error.message));}}
+ function refresh(){currency=draft.billing?.currency||currency;currencyField.querySelector('select').value=currency;controls.replaceChildren();for(const id of billResources(draft)){controls.append(field(BILL_NAMES[id]+' hourly rate ('+currency+')',draft.billing?.rates[id]??'',value=>{const rates={...Object.fromEntries(billResources(draft).map(i=>[i,null])),...draft.billing?.rates,[id]:value===''?null:value};setField('billing',{currency,rates});show();},{type:'number',min:0,max:1000000,step:.01,placeholder:'Company rate'}));}show();}
+ refresh();return {element:section,refresh};
+}
+function billPanel(){
+ const section=el('section','plan-status');section.append(el('h2','','Estimated bill'));
+ try{for(const line of billLines(draft))section.append(el(line.startsWith('Estimated total')?'strong':'p','',line));}catch(error){section.append(el('p','',error.message));}
+ section.append(button('Change company rates',()=>{step=2;render(true);},'text-button'),el('p','small-note',BILL_SCOPE));
+ const saved=state.jobs.find(j=>j.id===draft.id),same=saved&&JSON.stringify(saved)===JSON.stringify(draft);
+ const download=button('Download estimated bill PDF',async()=>{try{requireCurrent();const savedNow=state.jobs.find(j=>j.id===draft.id);if(!savedNow||JSON.stringify(savedNow)!==JSON.stringify(draft))throw new Error('Save your latest job changes before downloading the estimate.');await downloadPlanPdf(estimatedBillReport(state,draft.id),'fieldwork-estimated-bill.pdf');}catch(error){message(error.message);}},'primary');download.disabled=!same||stale||!!storageError;section.append(download);
+ if(!same)section.append(el('p','small-note','Save this job below before downloading its estimate.'));
+ return section;
 }
 function renderChecks(){
  const out=el('div');out.append(heading('03 / THE CHECKS','Is this job ready?','Record what has been checked. Unknown answers can stay in a draft.'));
@@ -157,6 +177,7 @@ function renderPlan(){
  const status=el('section','plan-status');status.append(el('strong','',reserved?'✓ Reserved in this draft':assessment.canReserve?'Ready for a draft booking':'Save now, finish the checks later'),el('p','',reserved?`Stage ${draft.stage}. These resources are unavailable for another job in the same stage.`:assessment.canReserve?'The recorded checks pass and the chosen resources are free.':'The job can stay as a draft while you work through the points below.'));out.append(status);
  const facts=el('div','plan-facts');for(const [label,value] of [['Job',draft.name||'Not named'],['Place',`${state.context.building||'No building'} · ${draft.place||'No place'}`],['Team',draft.mode==='manual'?names[draft.workerId]:`${draft.mode} + Robot helper`],['When',stages[draft.stage]]]){const cell=el('div');cell.append(el('span','',label),el('b','',value));facts.append(cell);}out.append(facts);
  const timing=el('section','plan-status');timing.append(el('h2','','Estimated completion time'));try{timing.append(el('p','',timingDescription(draft)));}catch(error){timing.append(el('p','',error.message));}timing.append(button('Change time estimate',()=>{step=2;render(true);},'text-button'),el('p','small-note','Duration after work starts, not a clock finish time. Include setup and finishing checks in your estimate. Stage bookings are unchanged.'));out.append(timing);
+ out.append(billPanel());
  if(assessment.quantities&&draft.groups.length)out.append(el('p','small-note',`${assessment.quantities.windows} windows · approximately ${areaLabel(assessment.quantities.area)} m² including the chosen sides.`));
  if(assessment.reasons.length){const list=el('ul','reason-list');for(const reason of assessment.reasons)list.append(el('li','',reason.replace(/^H1:/,'Robot helper:').replace(/^H2:/,'Cleaner:')));out.append(list);}
  if(draft.notes)out.append(el('p','small-note',draft.notes));
@@ -170,7 +191,7 @@ function renderPlan(){
 }
 function renderBoard(){const board=$('manager-board');board.replaceChildren();const header=el('div','board-heading');header.append(el('h2','','Your saved jobs'),el('span','',`${state.jobs.length} saved`));board.append(header);
  if(!state.jobs.length)board.append(el('div','empty-board','Start with one job. Then add another to see which resources are still free.'));
- for(const job of state.jobs){const card=el('section','board-card'+(job.id===draft.id?' current':''));card.append(el('span','status-chip '+(job.status==='reserved'?'booked':''),job.status==='reserved'?'Resources reserved':job.status==='released'?'Resources released':'Draft · no resources held'),el('h3','',job.name),el('p','',`${job.place} · Stage ${job.stage}`),el('p','',job.mode==='manual'?names[job.workerId]:`${job.mode} + Robot helper`));card.append(el('p','small-note',timingDescription(job)));card.append(button('Open job',()=>{draft=structuredClone(job);step=4;message('');render(true);},'text-button'));card.append(button('Record outcome',()=>openReview(job.id),'text-button'));board.append(card);}
+ for(const job of state.jobs){const card=el('section','board-card'+(job.id===draft.id?' current':''));card.append(el('span','status-chip '+(job.status==='reserved'?'booked':''),job.status==='reserved'?'Resources reserved':job.status==='released'?'Resources released':'Draft · no resources held'),el('h3','',job.name),el('p','',`${job.place} · Stage ${job.stage}`),el('p','',job.mode==='manual'?names[job.workerId]:`${job.mode} + Robot helper`));card.append(el('p','small-note',timingDescription(job)));const bill=billEstimate(job);card.append(el('p','small-note',bill.complete?'Estimated bill: '+money(bill.totalCents,bill.currency):'Estimated bill: incomplete'));card.append(button('Open job',()=>{draft=structuredClone(job);step=4;message('');render(true);},'text-button'));card.append(button('Record outcome',()=>openReview(job.id),'text-button'));board.append(card);}
  const resources=el('section','board-card');resources.append(el('h3','',`Resources · Stage ${draft.stage}`));for(const id of ['UR3','UR5','G1','H1','H2']){const row=el('div','board-resource');row.append(el('span','',names[id]),stateChip(id,false));resources.append(row);}board.append(resources,el('p','small-note','Jobs in the same stage happen together. Stage 2 begins after stage 1. Entered time estimates do not change stage bookings.'));
 }
 function render(focus=false){for(const cleanup of cleanups)cleanup();cleanups=[];const steps=$('manager-steps');steps.replaceChildren();['Job','Team','Checks','Plan'].forEach((label,i)=>{const b=button('',()=>go(i+1),'');b.append(el('b','',String(i+1)),document.createTextNode(label));if(step===i+1)b.setAttribute('aria-current','step');b.disabled=i>0&&!draft.name;b.setAttribute('aria-label',`${i+1}. ${label}`);steps.append(b);});

@@ -1,3 +1,4 @@
+import {normalizeBilling, billEstimate} from './booking-bill.mjs';
 import {timeEstimate} from './booking-time.mjs';
 /** Provisional resource bookings for a local planning draft. No robot is authorised here. */
 export const SCHEMA = 'fieldwork-bookings-v1';
@@ -9,7 +10,7 @@ export const LIMITS = Object.freeze({jobs: 100, groups: 10, count: 100000, dimen
 const MODES = ['manual', 'UR3', 'UR5', 'G1'];
 const STATUSES = ['draft', 'reserved', 'released'];
 const CHECK_LABELS = {area: 'Area check', permission: 'Permission to work', surface: 'Surface check', people: 'People and roles', equipment: 'Equipment check', access: 'Access check'};
-const JOB_KEYS = ['id', 'name', 'kind', 'place', 'stage', 'mode', 'workerId', 'groups', 'access', 'checks', 'notes', 'status', 'timeEstimate'];
+const JOB_KEYS = ['id', 'name', 'kind', 'place', 'stage', 'mode', 'workerId', 'groups', 'access', 'checks', 'notes', 'status', 'timeEstimate', 'billing'];
 const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
 
 export class BookingError extends Error {
@@ -50,7 +51,7 @@ export function initialState() {
   return {schema: SCHEMA, revision: 0, context: {company: '', customer: '', building: ''}, busy: Object.fromEntries(RESOURCE_IDS.map(id => [id, []])), jobs: []};
 }
 export function normalizeJob(input) {
-  object(input, JOB_KEYS, 'Job', ['status', 'timeEstimate']);
+  object(input, JOB_KEYS, 'Job', ['status', 'timeEstimate', 'billing']);
   const kind = enumeration(input.kind, KINDS, 'Job kind');
   if (!Array.isArray(input.groups) || input.groups.length > LIMITS.groups) fail('Use at most ' + LIMITS.groups + ' window size groups.');
   if (kind === 'windows' && !input.groups.length) fail('Add at least one window size group.');
@@ -65,6 +66,9 @@ export function normalizeJob(input) {
     job.timeEstimate = input.timeEstimate;
     try { timeEstimate(job); } catch (error) { fail(error.message); }
     job.timeEstimate = {basis: input.timeEstimate.basis, minutes: input.timeEstimate.minutes};
+  }
+  if (input.billing !== undefined && input.billing !== null) {
+    try { job.billing = normalizeBilling({...job,billing:input.billing}); billEstimate(job); } catch (error) { fail(error.message); }
   }
   const total = quantitiesUnchecked(job);
   if (total.windows > LIMITS.totalWindows || total.area > LIMITS.area) fail('The total window count or area is too large for this planning draft.');

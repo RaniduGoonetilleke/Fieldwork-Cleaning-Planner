@@ -2,7 +2,7 @@
 
 Enter a building job, choose the team, record the work checks and save a resource plan. A second job shows which resources are already booked.
 
-Manager interface: `building-planner-time-20261121`. The research service keeps its existing `manager-pack-r5-20261114` identity.
+Manager interface: `building-planner-bill-20261123`. The research service keeps its existing `manager-pack-r5-20261114` identity.
 
 **This is a planning demonstration.** A booking holds resources in a local draft. It does not establish robot suitability, approve work or start a robot. The research evidence and its decision rules remain available separately and are unchanged.
 
@@ -104,3 +104,11 @@ The research tour's quiet music is Blue Skies by HoliznaCC0 from Lazy Summer Lof
 After choosing the team, a manager can enter total minutes or, for window jobs, minutes per square metre across the chosen faces. No rate is supplied by the app. The plan, saved-job card and PDF label the result as a manager estimate. The JSON export preserves the entered basis and value for checking. Blank means unknown, and zero, negative and non-finite values are rejected. Changing the selected team clears the estimate. Estimates do not qualify a robot, override checks, free resources early or create a clock-based schedule. Include setup and finishing checks in the entered estimate.
 
 Existing browser bookings without timing fields still open. Exact exports remain tied to their release; use the earlier release to replay its exports.
+
+## Estimated customer bill
+
+After choosing the team and estimating the time, enter the company's hourly selling rates for that booking. A robot job includes a separate rate for its required helper. Manual work includes only the selected person. The same estimated job duration is charged to each selected resource, each charge is rounded to two decimal places, and those charges are added. No prices are supplied by the app.
+
+Rates and time stay with the saved job. Blank rates are unknown; explicit zero means no charge. Changing the team clears both time and rates; changing currency clears the rates without conversion. Supported currencies are GBP, EUR and USD. The plan shows a breakdown and an estimated total only when every required input is present. Save changes before downloading the separate estimated bill PDF. The general plan PDF includes the breakdown too. Exact exports preserve rate inputs; totals can be recomputed from them.
+
+This estimates robot and labour charges only. Tax, materials, travel and other extras are excluded and labelled as such. It is not a final invoice and makes no payment request. Drafts can have estimates, but the PDF keeps their draft status clear. Pricing does not authorise work or bypass suitability checks or booking conflicts. Rates are per booking, not a company-wide price list. Editing prices follows the existing changed-job rule: save and recheck before reserving again.

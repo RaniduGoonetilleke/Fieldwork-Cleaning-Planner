@@ -1,8 +1,9 @@
+import {billLines, BILL_SCOPE} from './booking-bill.mjs';
 import {timingDescription} from './booking-time.mjs';
 import {validateState, assessJob, quantities, requiredResources, availability, RESOURCE_IDS, CHECK_KEYS, SCOPE} from './booking-core.mjs';
 
 export const BOOKING_EXPORT_SCHEMA = 'fieldwork-booking-export-v1';
-export const BOOKING_RELEASE = 'building-planner-time-20261121';
+export const BOOKING_RELEASE = 'building-planner-bill-20261123';
 const resourceNames = {UR3: 'UR3', UR5: 'UR5', G1: 'G1', H1: 'Robot helper', H2: 'Cleaner'};
 const jobNames = {windows: 'Windows', whiteboards: 'Whiteboards', walls: 'Walls', desks: 'Desks', floors: 'Floors', bins: 'Bins', facade: 'Building facade'};
 const checkNames = {area: 'Area check', permission: 'Permission to work', surface: 'Surface check', people: 'People and roles', equipment: 'Equipment check', access: 'Access check'};
@@ -90,6 +91,7 @@ export function bookingReport(input) {
       blocks.push(body('Total: ' + total.windows + ' windows; about ' + areaText(total.area) + ' m² across the requested faces.'), note('Area assumes rectangular windows: count × width × height, doubled for both faces. These quantities do not establish robot capacity, reach, cleaning speed or suitability.'));
     }
     blocks.push(block('label', 'Estimated completion time'), body(timingDescription(job)), note('Duration after work starts, not a clock finish time. The manager must include setup and finishing checks.'));
+    blocks.push(block('label', 'Estimated bill'), ...billLines(job).map(text=>text.startsWith('Estimated total')?block('label',text):body(text)), note(BILL_SCOPE));
     blocks.push(block('label', 'Entered checks'));
     for (const key of CHECK_KEYS) blocks.push(body(checkNames[key] + ': ' + checkWords[job.checks[key]] + '.'));
     if (assessment.reasons.length) blocks.push(block('label', 'What needs attention'), ...assessment.reasons.map(body));
@@ -128,4 +130,19 @@ export async function planSnapshots(input) {
       method: compactMethod(job), stage: job.stage, inventedExample: false,
     };
   }));
+}
+
+/** Customer-facing estimate for one saved job; no tax or payment demand is generated. */
+export function estimatedBillReport(input, jobId) {
+ const state=validateState(input),job=state.jobs.find(j=>j.id===jobId);
+ if(!job)throw new Error('Save this job before downloading its estimate.');
+ const title='Estimated bill';
+ const blocks=[block('kicker','CUSTOMER ESTIMATE'),block('title',title)];
+ for(const [key,label] of [['company','Cleaning company'],['customer','Customer'],['building','Building']])blocks.push(body(label+': '+(state.context[key]||'Not entered')));
+ blocks.push(body('Job: '+job.name+' / '+job.place),body('Job reference: '+job.id),body('Stage: '+job.stage),block('label',bookingText(job)),body('Requested team: '+names(requiredResources(job))),body(timingDescription(job)));
+ if(job.groups.length){const q=quantities(job);blocks.push(body(q.windows+' windows; approximately '+areaText(q.area)+' m² across the selected faces.'));}
+ blocks.push(block('section','Estimated charges'),...billLines(job).map(text=>text.startsWith('Estimated total')?block('label',text):body(text)),note('Each selected resource is charged for the same entered job duration. Rates are company-entered selling rates. Each line is rounded to two decimal places before adding the total.'),note(BILL_SCOPE));
+ const assessment=assessJob(state,job);if(assessment.reasons.length)blocks.push(note('This booking is not ready. See the job plan for outstanding checks or resource conflicts.'));
+ blocks.push(note('This estimate does not confirm robot suitability or permission to start work. It is a snapshot of the saved booking; changes need a new estimate.'));
+ return {title,blocks};
 }

@@ -4,7 +4,7 @@
   "checkedOn": "2026-11-15",
   "counts": {
     "pythonTests": 309,
-    "javascriptTestFiles": 19
+    "javascriptTestFiles": 20
   },
   "summary": "Software checks cover the preserved research service and the new provisional resource-booking interface. They do not measure planning benefit or real-world cleaning performance.",
   "checks": [
@@ -15,7 +15,7 @@
     },
     {
       "name": "JavaScript test files",
-      "result": "19 files passed with Node 24.22.1",
+      "result": "20 files passed with Node 24.22.1",
       "shows": "These include 43 functional tests for provisional bookings, transaction storage and booking reports. The subprocess CLI test is skipped in the restricted test environment; direct CLI checks were run separately. Existing research and job-review tests also pass."
     },
     {
@@ -52,6 +52,11 @@
       "name": "Optional job duration",
       "result": "Seven timing tests passed; local Chromium flow checked",
       "shows": "An entered 2 minutes/m\u00b2 across 24 m\u00b2 gives 48 minutes. Team changes clear the estimate. Saving, exact export, PDF report text, invalid values and unchanged booking guards are covered. The estimate is a manager assumption, not measured robot performance."
+    },
+    {
+      "name": "Estimated customer bill",
+      "result": "12 billing tests passed; targeted local Chromium flow checked",
+      "shows": "Company-entered rates produce separate robot and helper charges, or one manual charge. Unknown inputs remain incomplete; zero is explicit. Currency and team changes clear rates. Saving/reload and the disabled download for unsaved changes were checked. A one-page estimate was generated as PDF bytes and its rendered layout inspected. The browser automation did not expose the native download event, so a downloaded PDF file was not independently inspected."
     }
   ],
   "notShown": [
@@ -64,5 +69,5 @@
     "No live robot. The page cannot connect to, start or stop a robot.",
     "No formal accessibility audit."
   ],
-  "uiRelease": "building-planner-time-20261121"
+  "uiRelease": "building-planner-bill-20261123"
 }
